@@ -1,11 +1,27 @@
 import React  from 'react'
+import Ticker from 'react-ticker'
 
 
-const ScrollScreen=()=>{
+
+const ScrollScreen=({phrases})=>{
+
+  const phrase = phrases.map(item =>{
+
+    return (
+  <Ticker>
+    {({}) => (
+      <>
+        <h1> {item.text} </h1>
+      </>
+    )}
+  </Ticker>
+);
+  } ) 
+
   return(
-    <h1>hello from the header component</h1>
-
+    [phrase]
   )
+  
 }
 
 export default ScrollScreen;

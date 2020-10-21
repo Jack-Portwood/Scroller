@@ -1,5 +1,6 @@
 import React ,{useEffect,useState,Fragment} from 'react'
 import SingleScrollItem from "./SingleScrollItem"
+import ScrollScreen from "./ScrollScreen"
 
 //state to go here
 //arrayOfPhrases objects
@@ -22,7 +23,7 @@ const [phrases,setPhrases]=useState([{id:0,text:"this is the first item",speed:5
   return(
     <Fragment>
     <h2>Hello from the Scroll Choices component</h2>
-    <SingleScrollItem phrases={phrases} updatePhrases={updatePhrases}/>
+    <ScrollScreen phrases={phrases} updatePhrases={updatePhrases}/>
     </Fragment>
   )
 }
