@@ -6,10 +6,11 @@ import SingleScrollItem from "./SingleScrollItem"
 //selectedPhrase
 
 //phraseObject{id:uuid,text:phrase,speed:number,css:css}
+const ScrollChoicesComponent = (props) => {
 
-const [phrases,setPharases]=useState([{id:0,text:"this is the first item",speed:5,css:"placeholder"},{id:1,text:"this is the first item",speed:10,css:"placeholder"},{id:2,text:"this is the first item",speed:3,css:"placeholder"}])
+const [phrases,setPhrases]=useState([{id:0,text:"this is the first item",speed:5,css:"placeholder"},{id:1,text:"this is the first item",speed:10,css:"placeholder"},{id:2,text:"this is the first item",speed:3,css:"placeholder"}])
 
-
+}
 const ScrollChoices=()=>{
   return(
     <Fragment>
@@ -19,4 +20,6 @@ const ScrollChoices=()=>{
   )
 }
 
-export default ScrollChoices;
+
+
+export default ScrollChoicesComponent;
