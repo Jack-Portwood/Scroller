@@ -8,7 +8,7 @@ const ScrollScreen=({phrases})=>{
   const phrase = phrases.map(item =>{
 
     return (
-  <Ticker>
+  <Ticker speed = {item.speed}>
     {({}) => (
       <>
         <h1> {item.text} </h1>
