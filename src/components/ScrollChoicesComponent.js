@@ -8,6 +8,7 @@ import SingleScrollItem from "./SingleScrollItem"
 //phraseObject{id:uuid,text:phrase,speed:number,css:css}
 
 
+
 const ScrollChoicesComponent = () => {
 
 function updatePhrases(event){
