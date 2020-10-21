@@ -1,5 +1,5 @@
 import React ,{Fragment}from 'react';
-import ScrollChoices from "./components/ScrollChoicesComponent"
+import ScrollChoicesComponent from "./components/ScrollChoicesComponent"
 import Header from "./components/Header"
 
 function App() {
