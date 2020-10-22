@@ -1,6 +1,10 @@
 
 
-
+.container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 .tickerContainer{
   width: 80vw;
@@ -32,6 +36,15 @@
 }
 
 .btn-updateModal{
+  
+
+}
+
+.options-btn{
+
+  height: 40px;
+  width: 40px
+  
 
 }
 

@@ -1,6 +1,7 @@
 import React ,{useState} from 'react'
 import Ticker from 'react-ticker'
 import Modal from 'react-modal';
+import {IoIosOptions} from 'react-icons/io'
 
 
 const ModalForm=({item,reverseStatus})=>{
@@ -12,9 +13,9 @@ const ModalForm=({item,reverseStatus})=>{
 
   return (
     <div className="modelWrapper">
-      <button className="btn-updateModal" onClick={changeModal}>
-        Settings
-      </button>
+
+      <IoIosOptions className="options-btn" onClick={changeModal}></IoIosOptions>
+
       <Modal className="myModal" isOpen={modalIsOpen}>
         <button className="btn-updateModal" onClick={changeModal}>
           Close

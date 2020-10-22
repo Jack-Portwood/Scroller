@@ -14,18 +14,19 @@ const ScrollScreen=({phrases})=>{
   const phrase = phrases.map(item =>{
 
     return (
-      <div className="tickerContainer">
-  <Ticker speed = {item.speed}>
-    {({}) => (
-      <>
-        <h1 style={{color:"red"}}> {item.text} </h1>
-      </>
-    )}
-  </Ticker>
-  <ModalForm item={item} reverseStatus={reverseStatus}/>
-
-  </div>
-);
+      <div className="container">
+        <div className="tickerContainer">
+          <Ticker speed={item.speed}>
+            {({}) => (
+              <>
+                <h1 style={{ color: "red" }}> {item.text} </h1>
+              </>
+            )}
+          </Ticker>
+        </div>
+        <ModalForm item={item} reverseStatus={reverseStatus} />
+      </div>
+    );
   } )
 
   return(
