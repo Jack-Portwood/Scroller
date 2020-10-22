@@ -3,7 +3,7 @@ import React  from 'react'
 
 const Header=()=>{
   return(
-    <h1>hello from the header component</h1>
+    <h1 style={{border:"1px solid blue",width:300}}>Scroller</h1>
 
   )
 }
