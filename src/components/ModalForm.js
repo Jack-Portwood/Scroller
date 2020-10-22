@@ -10,17 +10,18 @@ const ModalForm=({item,reverseStatus})=>{
     setIsOpen(!modalIsOpen)
   }
 
-  return(
-    <div>
-    <button onClick={changeModal}>Settings</button>
-    <Modal className='myModal' isOpen={modalIsOpen}>
-    <p>hello from the modal form </p>
-    <button onClick={changeModal}>Close Modal</button>
-
-
-    </Modal>
+  return (
+    <div className="modelWrapper">
+      <button className="btn-updateModal" onClick={changeModal}>
+        Settings
+      </button>
+      <Modal className="myModal" isOpen={modalIsOpen}>
+        <button className="btn-updateModal" onClick={changeModal}>
+          Close
+        </button>
+      </Modal>
     </div>
-  )
+  );
 }
 
 export default ModalForm;

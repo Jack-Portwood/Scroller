@@ -1,8 +1,20 @@
 
 
 
+
+.tickerContainer{
+  width: 80vw;
+  border: 1px solid black;
+  border-Radius:25px;
+  margin: 20px;
+}
+
 .name{
   font-family:  'Faster One', sans-serif
+}
+
+.modelWrapper{
+  
 }
 
 .myModal{
@@ -18,3 +30,9 @@
   overflow: scroll;
   background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
 }
+
+.btn-updateModal{
+
+}
+
+

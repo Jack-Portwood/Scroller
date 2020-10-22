@@ -21,7 +21,7 @@ const [phrases,setPhrases]=useState([{id:0,text:"this is the first item",speed:5
 
   return(
     <Fragment>
-    <ScrollScreen phrases={phrases} updatePhrases={updatePhrases}/>
+    <ScrollScreen className="mainContainer" phrases={phrases} updatePhrases={updatePhrases}/>
     </Fragment>
   )
 }

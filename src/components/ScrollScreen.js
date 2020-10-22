@@ -14,7 +14,7 @@ const ScrollScreen=({phrases})=>{
   const phrase = phrases.map(item =>{
 
     return (
-      <div style={{width:400,border:"1px solid black",borderRadius:25}}>
+      <div className="tickerContainer">
   <Ticker speed = {item.speed}>
     {({}) => (
       <>
