@@ -1,0 +1,13 @@
+.myModal{
+  margin-top: 10vh;
+  margin-left: 32vw;
+  text-align:center;
+  width:500px;
+  height:550px;
+  background-color: white;
+  box-shadow: inset -4px -4px  #bfb9b9;
+  border-left: solid 1px black;
+  border-top: solid 1px black;
+  overflow: scroll;
+  background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}

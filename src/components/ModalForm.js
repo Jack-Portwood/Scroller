@@ -13,9 +13,9 @@ const ModalForm=({item,reverseStatus})=>{
   return(
     <div>
     <button onClick={changeModal}>Settings</button>
-    <Modal className='myModal' isOpen={modalIsOpen} onRequestClose={reverseStatus} style={{border:"1px solid blue",width:300}}>
-    <p>hello from the modal form</p>
-    <button onClick={changeModal}>Settings</button>
+    <Modal className='myModal' isOpen={modalIsOpen}>
+    <p>hello from the modal form </p>
+    <button onClick={changeModal}>Close Modal</button>
 
 
     </Modal>
