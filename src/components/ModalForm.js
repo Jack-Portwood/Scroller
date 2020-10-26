@@ -4,7 +4,7 @@ import Modal from 'react-modal';
 import {IoIosOptions} from 'react-icons/io'
 
 
-const ModalForm=({item,reverseStatus})=>{
+const ModalForm=({item})=>{
   const [modalIsOpen,setIsOpen] =useState(false);
 
   function changeModal(){
@@ -17,6 +17,8 @@ const ModalForm=({item,reverseStatus})=>{
       <IoIosOptions className="options-btn" onClick={changeModal}></IoIosOptions>
 
       <Modal className="myModal" isOpen={modalIsOpen}>
+        <h1>Placeholder for content</h1>
+        <h2>{item.text}</h2>
         <button className="btn-updateModal" onClick={changeModal}>
           Close
         </button>
