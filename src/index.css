@@ -8,9 +8,16 @@
 
 .tickerContainer{
   width: 80vw;
+  max-height: 10vh;
   border: 1px solid black;
   border-Radius:25px;
-  margin: 20px;
+  margin:   1vh;
+}
+
+.ticker{
+  background-color: blue;
+  max-height: 10vh;
+  border-Radius:25px;
 }
 
 .name{
@@ -18,7 +25,7 @@
 }
 
 .modelWrapper{
-  
+
 }
 
 .myModal{
@@ -36,16 +43,11 @@
 }
 
 .btn-updateModal{
-  
+
 
 }
 
 .options-btn{
-
   height: 40px;
   width: 40px
-  
-
 }
-
-

@@ -16,7 +16,7 @@ const ScrollScreen=({phrases})=>{
     return (
       <div className="container">
         <div className="tickerContainer">
-          <Ticker speed={item.speed}>
+          <Ticker className="ticker" speed={item.speed}>
             {({}) => (
               <>
                 <h1 style={{ color: "red" }}> {item.text} </h1>
