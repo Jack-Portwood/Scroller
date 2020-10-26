@@ -7,9 +7,7 @@ import ModalForm from './ModalForm'
 
 const ScrollScreen=({phrases})=>{
 
-  function reverseStatus(){
-    console.log("hello status")
-  }
+
 
   const phrase = phrases.map(item =>{
 
@@ -18,11 +16,13 @@ const ScrollScreen=({phrases})=>{
           <Ticker className="ticker" speed={item.speed}>
             {({}) => (
               <>
-               <h1>  {item.text} </h1>
+              <div className="text-div">
+               <h1 className="ticker-text">  {item.text} </h1>
+               </div>
               </>
             )}
           </Ticker>
-        <ModalForm item={item} reverseStatus={reverseStatus} />
+        <ModalForm item={item} />
       </div>
     );
   } )
