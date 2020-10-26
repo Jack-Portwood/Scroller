@@ -15,7 +15,6 @@ const ScrollScreen=({phrases})=>{
 
     return (
       <div className="container">
-        <div className="tickerContainer">
           <Ticker className="ticker" speed={item.speed}>
             {({}) => (
               <>
@@ -23,7 +22,6 @@ const ScrollScreen=({phrases})=>{
               </>
             )}
           </Ticker>
-        </div>
         <ModalForm item={item} reverseStatus={reverseStatus} />
       </div>
     );
