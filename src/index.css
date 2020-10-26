@@ -7,16 +7,17 @@
 }
 
 .ticker{
-  background-color: blue;
+  background-color: black;
   width: 80vw;
   max-height: 10vh;
   border: 1px solid black;
   border-Radius:25px;
-  margin:   1vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  margin: 1vh;
+  color:orange;
+  font-size: 2vh;
 }
+
+
 
 .name{
   font-family:  'Faster One', sans-serif
