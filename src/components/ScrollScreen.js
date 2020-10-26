@@ -16,9 +16,7 @@ const ScrollScreen=({phrases})=>{
           <Ticker className="ticker" speed={item.speed}>
             {({}) => (
               <>
-              <div className="text-div">
                <h1 className="ticker-text">  {item.text} </h1>
-               </div>
               </>
             )}
           </Ticker>

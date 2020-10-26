@@ -7,13 +7,11 @@
   height:10vh;
   max-height: 10vh;
   margin: 1vh;
-  border: 1px solid blue;
 }
 
 .ticker{
   background-color: black;
   width: 80vw;
-  border: 1px solid red;
   border-Radius:25px;
 }
 
@@ -47,15 +45,7 @@
   width: 40px
 }
 
-.text-div{
-  overflow: hidden;
-  max-height: 5vh;
-  border: 1px solid purple;
-}
-
-
 .ticker-text{
   font-size: 2vh;
   color: orange;
-  border: 1px solid yellow;
 }
