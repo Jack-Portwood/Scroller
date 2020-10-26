@@ -17,7 +17,17 @@ console.log(phrases[0] +"hiya")
 
 }
 
-const [phrases,setPhrases]=useState([{id:0,text:"this is the first item",speed:5,css:"placeholder"},{id:1,text:"this is the second item",speed:10,css:"placeholder"},{id:2,text:"this is the third item",speed:3,css:"placeholder"}])
+const [phrases, setPhrases] = useState([
+  { id: 0, text: "this is the first item", speed: 5, css: "placeholder" },
+  {
+    id: 1,
+    text:
+      "LOOONG TEEEXT LOOONG TEEEXT LOOONG TEEEXT LOOONG TEEEXT LOOONG TEEEXT LOOONG TEEEXT LOOONG TEEEXT LOOONG TEEEXT LOOONG TEEEXT LOOONG TEEEXT LOOONG TEEEXT LOOONG TEEEXT LOOONG TEEEXT LOOONG TEEEXT LOOONG TEEEXT LOOONG TEEEXT LOOONG TEEEXT LOOONG TEEEXT LOOONG TEEEXT LOOONG TEEEXT LOOONG TEEEXT LOOONG TEEEXT LOOONG TEEEXT LOOONG TEEEXT",
+    speed: 4,
+    css: "placeholder",
+  },
+  { id: 2, text: "this is the third item", speed: 3, css: "placeholder" },
+]);
 
   return(
     <Fragment>
