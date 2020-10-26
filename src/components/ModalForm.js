@@ -11,6 +11,8 @@ const ModalForm=({item})=>{
     setIsOpen(!modalIsOpen)
   }
 
+  Modal.setAppElement("body")
+
   return (
     <div className="modelWrapper">
 

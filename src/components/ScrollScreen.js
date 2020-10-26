@@ -17,6 +17,7 @@ const ScrollScreen=({phrases})=>{
             {({}) => (
               <>
                <h1 className="ticker-text">  {item.text} </h1>
+
               </>
             )}
           </Ticker>
