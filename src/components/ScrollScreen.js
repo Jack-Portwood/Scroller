@@ -6,7 +6,6 @@ import ModalForm from './ModalForm'
 
 
 const ScrollScreen=({phrases, selectedPhrase, rotated})=>{
-  console.log(rotated);
 
   const phrase = phrases.map((item) => {
     return (
@@ -22,15 +21,16 @@ const ScrollScreen=({phrases, selectedPhrase, rotated})=>{
       </div>
     );
   });
-  if(rotated){
+
+  if(!rotated){
   return [phrase];
 }
   return (
-    <div className="rotatedDiv">
-      <Ticker className="fullScreenTicker" speed={selectedPhrase.speed}>
+    <div className="rotated-Div">
+      <Ticker className="full-Screen-Ticker" speed={selectedPhrase.speed}>
         {({}) => (
           <>
-            <h1 className="rotatedH1">{selectedPhrase.text}</h1>
+            <h1 className="rotated-H1">{selectedPhrase.text}</h1>
           </>
         )}
       </Ticker>

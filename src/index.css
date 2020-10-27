@@ -43,9 +43,6 @@
   height: 10vh;
   width: 10vw;
   margin-left:1vw;
-
-
-
 }
 
 .ticker-text{
@@ -54,13 +51,9 @@
   white-space: pre;
 }
 
-.fullScreenTicker{
-  width: 100vw;
-  height: 100vh;
-  color: orange;
-}
 
-.rotatedH1{
+
+.rotated-H1{
   color: orange;
 }
 

@@ -30,7 +30,7 @@ const [phrases, setPhrases] = useState([
   { id: 2, text: "this is the third item", speed: 3, css: "placeholder" },
 ]);
 
-const [selectedPhrase, setSelectedPhrase] = useState(phrases[2]);
+const [selectedPhrase, setSelectedPhrase] = useState(phrases[0]);
 
   return (
     <DeviceOrientation lockOrientation={"portrait"}>
@@ -40,18 +40,17 @@ const [selectedPhrase, setSelectedPhrase] = useState(phrases[2]);
           <ScrollScreen
             phrases={phrases}
             updatePhrases={updatePhrases}
-            rotated={true}
+            rotated={false}
           />
         </Fragment>
       </Orientation>
 
       <Orientation orientation="landscape" alwaysRender={false}>
         <Fragment>
-          <ScrollScreen
-            phrases={phrases}
-            selectedPhrase={selectedPhrase}
-            updatePhrases={updatePhrases}
-            rotated={false}
+          <ScrollScreen 
+          phrases={phrases} 
+          selectedPhrase={selectedPhrase}
+          rotated={true}
           />
         </Fragment>
       </Orientation>
