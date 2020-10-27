@@ -1,6 +1,7 @@
 import React ,{useEffect,useState,Fragment} from 'react'
 import ScrollScreen from "./ScrollScreen"
 import Header from "./Header"
+import DeviceOrientation, {Orientation} from 'react-screen-orientation'
 
 //state to go here
 //arrayOfPhrases objects
@@ -32,18 +33,23 @@ const [phrases, setPhrases] = useState([
   { id: 2, text: "this is the third item", speed: 3, css: "placeholder" },
 ]);
 if (rotate===false){
-  return(
-    <Fragment>
-    <Header/>
-    <ScrollScreen  phrases={phrases} updatePhrases={updatePhrases}/>
-    </Fragment>
-  )
+  return (
+    <DeviceOrientation lockOrientation={"portrait"}>
+      <Orientation orientation="portrait" alwaysRender={false}>
+        <Fragment>
+          <Header />
+          <ScrollScreen phrases={phrases} updatePhrases={updatePhrases} />
+        </Fragment>
+      </Orientation>
+      <Orientation orientation="landscape" alwaysRender={false}>
+        <Fragment>
+          <h1>Landscape</h1>
+        </Fragment>
+      </Orientation>
+    </DeviceOrientation>
+  );
 }
-return(
-  <Fragment>
-  <p>Hello</p>
-  </Fragment>
-)
+
 }
 
 

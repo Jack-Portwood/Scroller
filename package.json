@@ -10,6 +10,7 @@
     "react-dom": "^16.14.0",
     "react-icons": "^3.11.0",
     "react-modal": "^3.11.2",
+    "react-screen-orientation": "0.0.4",
     "react-scripts": "3.4.3",
     "react-scrolling-text": "^1.0.0",
     "react-ticker": "^1.2.2"
