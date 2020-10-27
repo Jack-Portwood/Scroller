@@ -34,6 +34,8 @@
   border-top: solid 1px black;
   overflow: scroll;
   background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  margin-left: 10vw;
+  margin-top: 10vh;
 }
 
 
