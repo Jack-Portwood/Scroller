@@ -13,13 +13,10 @@ import DeviceOrientation, {Orientation} from 'react-screen-orientation'
 
 const ScrollChoicesComponent = () => {
 
-function updatePhrases(event){
-  event.preventDefault()
-console.log(phrases[0] +"hiya")
-
+function updatePhrases(event) {
+  event.preventDefault();
+  console.log(phrases[0] + "hiya");
 }
-
-const [rotate,setRotate]=useState(false)
 
 const [phrases, setPhrases] = useState([
   { id: 0, text: "this is the first item", speed: 5, css: "placeholder" },
@@ -32,25 +29,37 @@ const [phrases, setPhrases] = useState([
   },
   { id: 2, text: "this is the third item", speed: 3, css: "placeholder" },
 ]);
-if (rotate===false){
+
+const [selectedPhrase, setSelectedPhrase] = useState(phrases[2]);
+
   return (
     <DeviceOrientation lockOrientation={"portrait"}>
       <Orientation orientation="portrait" alwaysRender={false}>
         <Fragment>
           <Header />
-          <ScrollScreen phrases={phrases} updatePhrases={updatePhrases} />
+          <ScrollScreen
+            phrases={phrases}
+            updatePhrases={updatePhrases}
+            rotated={true}
+          />
         </Fragment>
       </Orientation>
+
       <Orientation orientation="landscape" alwaysRender={false}>
         <Fragment>
-          <h1>Landscape</h1>
+          <ScrollScreen
+            phrases={phrases}
+            selectedPhrase={selectedPhrase}
+            updatePhrases={updatePhrases}
+            rotated={false}
+          />
         </Fragment>
       </Orientation>
     </DeviceOrientation>
   );
 }
 
-}
+
 
 
 
