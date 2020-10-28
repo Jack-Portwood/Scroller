@@ -2,6 +2,7 @@ import React ,{useState} from 'react'
 import Ticker from 'react-ticker'
 import Modal from 'react-modal';
 import ModalForm from './ModalForm'
+import Header from "./Header";
 
 
 
@@ -23,7 +24,10 @@ const ScrollScreen=({phrases, selectedPhrase, rotated})=>{
   });
 
   if(!rotated){
-  return [phrase];
+  return <div className="phrasesWrapper">
+    <Header/>
+    {phrase}
+    </div>;
 }
   return (
     <div className="rotated-Div-Wrapper">

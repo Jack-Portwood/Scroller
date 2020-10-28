@@ -23,8 +23,8 @@ const [phrases, setPhrases] = useState([
   {
     id: 1,
     text:
-      "LOOONG TEEEXT LOOONG TEEEXT LOOONG TEEEXT LOOONG TEEEXT LOOONG TEEEXT LOOONG TEEEXT LOOONG TEEEXT LOOONG TEEEXT LOOONG TEEEXT LOOONG TEEEXT LOOONG TEEEXT LOOONG TEEEXT LOOONG TEEEXT LOOONG TEEEXT LOOONG TEEEXT LOOONG TEEEXT LOOONG TEEEXT LOOONG TEEEXT LOOONG TEEEXT LOOONG TEEEXT LOOONG TEEEXT LOOONG TEEEXT LOOONG TEEEXT LOOONG TEEEXT",
-    speed: 8,
+      " Hello World, I am still in development view on your mobile device",
+    speed: 5,
     css: "placeholder",
   },
   { id: 2, text: "this is the third item", speed: 7, css: "placeholder" },
@@ -36,7 +36,6 @@ const [selectedPhrase, setSelectedPhrase] = useState(phrases[1]);
     <DeviceOrientation lockOrientation={"portrait"}>
       <Orientation orientation="portrait" alwaysRender={false}>
         <Fragment >
-          <Header />
           <ScrollScreen
             phrases={phrases}
             updatePhrases={updatePhrases}
