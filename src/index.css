@@ -48,7 +48,15 @@ body{
   margin-top: 10vh;
 }
 
+.add-btn{
+  height: 10vh;
+  width: 10vw;
+}
+.add-Btn-Container{
+  text-align: right;
+  padding-right: 2vw;
 
+}
 .options-btn{
   height: 10vh;
   width: 10vw;

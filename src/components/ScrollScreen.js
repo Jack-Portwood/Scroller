@@ -1,12 +1,13 @@
 import React ,{useState} from 'react'
 import Ticker from 'react-ticker'
-import Modal from 'react-modal';
 import ModalForm from './ModalForm'
 import Header from "./Header";
+import { IoIosAddCircleOutline } from "react-icons/io";
 
 
 
-const ScrollScreen=({phrases, selectedPhrase, rotated})=>{
+const ScrollScreen=({phrases, selectedPhrase, rotated, createPhrase, changeModal})=>{
+
 
   const phrase = phrases.map((item) => {
     return (
@@ -18,16 +19,24 @@ const ScrollScreen=({phrases, selectedPhrase, rotated})=>{
             </>
           )}
         </Ticker>
-        <ModalForm item={item} />
+        <ModalForm item={item} createPhrase={createPhrase} />
       </div>
     );
   });
 
   if(!rotated){
-  return <div className="phrasesWrapper">
-    <Header/>
-    {phrase}
-    </div>;
+  return (
+    <div className="phrasesWrapper">
+      <Header />
+      {phrase}
+      <div className="add-Btn-Container">
+        <IoIosAddCircleOutline
+          className="add-btn"
+          onClick={changeModal}
+        ></IoIosAddCircleOutline>
+      </div>
+    </div>
+  );
 }
   return (
     <div className="rotated-Div-Wrapper">
