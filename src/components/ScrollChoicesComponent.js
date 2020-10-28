@@ -19,7 +19,7 @@ function updatePhrases(event) {
 }
 
 const [phrases, setPhrases] = useState([
-  { id: 0, text: "this is the first item", speed: 5, css: "placeholder" },
+  { id: 0, text: "this is the first item", speed: 2, css: "placeholder" },
   {
     id: 1,
     text:
@@ -27,7 +27,7 @@ const [phrases, setPhrases] = useState([
     speed: 8,
     css: "placeholder",
   },
-  { id: 2, text: "this is the third item", speed: 7, css: "placeholder" },
+  { id: 2, text: "this is the third item", speed: 15, css: "placeholder" },
 ]);
 
 const [selectedPhrase, setSelectedPhrase] = useState(phrases[1]);
