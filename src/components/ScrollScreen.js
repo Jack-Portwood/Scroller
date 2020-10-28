@@ -10,7 +10,7 @@ const ScrollScreen=({phrases, selectedPhrase, rotated})=>{
   const phrase = phrases.map((item) => {
     return (
       <div className="container">
-        <Ticker className="ticker" speed={item.speed}>
+        <Ticker speed={item.speed}>
           {({}) => (
             <>
               <h1 className="ticker-text"> {item.text} </h1>

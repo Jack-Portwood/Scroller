@@ -10,7 +10,8 @@
 
 .ticker{
   background-color: black;
-  width: 80vw;
+  width: 100vw;
+  height:100vh;
   border-Radius:25px;
 }
 
@@ -51,10 +52,15 @@
   white-space: pre;
 }
 
-
-
-.rotated-H1{
-  color: orange;
+.rotated-Div {
+  height: 100vmax;
+  width:100vmax;
+  white-space: pre;
 }
 
 
+
+.rotated-H1{
+  color: red;
+  font-size: 35vh;
+}

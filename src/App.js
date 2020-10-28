@@ -3,7 +3,7 @@ import ScrollChoicesComponent from "./components/ScrollChoicesComponent"
 
 function App() {
   return (
-    <Fragment>
+    <Fragment >
       <ScrollChoicesComponent/>
     </Fragment>
   );
