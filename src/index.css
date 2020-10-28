@@ -1,4 +1,6 @@
-
+body{
+  background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+}
 .container{
   display: flex;
   align-items: center;
@@ -18,7 +20,7 @@
 
 
 .name{
-  font-family:  'Faster One', sans-serif
+  font-family:  'Faster One', sans-serif;
 }
 
 .modelWrapper{
@@ -52,15 +54,28 @@
   white-space: pre;
 }
 
+.rotated-Div-Wrapper{
+  background-color: black;
+  width:100vw;
+  height: 100vh;
+
+   
+}
+
 .rotated-Div {
-  height: 100vmax;
-  width:100vmax;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width:100vw;
   white-space: pre;
+  background-color: black;
+
 }
 
 
 
 .rotated-H1{
   color: red;
-  font-size: 35vh;
+  font-size: 45vh;
 }

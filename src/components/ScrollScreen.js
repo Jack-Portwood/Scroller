@@ -26,14 +26,16 @@ const ScrollScreen=({phrases, selectedPhrase, rotated})=>{
   return [phrase];
 }
   return (
-    <div className="rotated-Div">
-      <Ticker className="full-Screen-Ticker" speed={selectedPhrase.speed}>
-        {({}) => (
-          <>
-            <h1 className="rotated-H1">{selectedPhrase.text}</h1>
-          </>
-        )}
-      </Ticker>
+    <div className="rotated-Div-Wrapper">
+      <div className="rotated-Div">
+        <Ticker className="full-Screen-Ticker" speed={selectedPhrase.speed}>
+          {({}) => (
+            <>
+              <h1 className="rotated-H1">{selectedPhrase.text}</h1>
+            </>
+          )}
+        </Ticker>
+      </div>
     </div>
   );
 }

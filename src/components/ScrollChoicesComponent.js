@@ -24,13 +24,13 @@ const [phrases, setPhrases] = useState([
     id: 1,
     text:
       "LOOONG TEEEXT LOOONG TEEEXT LOOONG TEEEXT LOOONG TEEEXT LOOONG TEEEXT LOOONG TEEEXT LOOONG TEEEXT LOOONG TEEEXT LOOONG TEEEXT LOOONG TEEEXT LOOONG TEEEXT LOOONG TEEEXT LOOONG TEEEXT LOOONG TEEEXT LOOONG TEEEXT LOOONG TEEEXT LOOONG TEEEXT LOOONG TEEEXT LOOONG TEEEXT LOOONG TEEEXT LOOONG TEEEXT LOOONG TEEEXT LOOONG TEEEXT LOOONG TEEEXT",
-    speed: 4,
+    speed: 8,
     css: "placeholder",
   },
-  { id: 2, text: "this is the third item", speed: 3, css: "placeholder" },
+  { id: 2, text: "this is the third item", speed: 7, css: "placeholder" },
 ]);
 
-const [selectedPhrase, setSelectedPhrase] = useState(phrases[0]);
+const [selectedPhrase, setSelectedPhrase] = useState(phrases[1]);
 
   return (
     <DeviceOrientation lockOrientation={"portrait"}>
