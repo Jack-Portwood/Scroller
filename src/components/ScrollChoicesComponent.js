@@ -35,7 +35,15 @@ const [phrases, setPhrases] = useState([
   { id: 2, text: "this is the third item", speed: 15, css: "placeholder" },
 ]);
 
-const [selectedPhrase, setSelectedPhrase] = useState(phrases[1]);
+let [selectedPhrase, setSelectedPhrase] = useState(phrases[1]);
+
+ function usePhrase(event){
+   event.preventDefault();
+   console.log(event)
+   setSelectedPhrase = event.value
+
+ }
+
 
 
   return (
@@ -47,6 +55,7 @@ const [selectedPhrase, setSelectedPhrase] = useState(phrases[1]);
             updatePhrases={updatePhrases}
             rotated={false}
             createPhrase={createPhrase}
+            usePhrase={usePhrase}
           />
         </Fragment>
       </Orientation>
