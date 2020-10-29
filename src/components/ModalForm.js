@@ -1,7 +1,8 @@
 import React ,{useState} from 'react'
-import Ticker from 'react-ticker'
+// import Ticker from 'react-ticker'
 import Modal from 'react-modal';
-import { IoIosOptions, IoIosAddCircleOutline } from "react-icons/io";
+import { IoIosOptions} from "react-icons/io";
+// , IoIosAddCircleOutline may be used later
 
 
 const ModalForm=({item,createPhrase})=>{

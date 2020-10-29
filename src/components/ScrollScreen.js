@@ -1,4 +1,4 @@
-import React ,{useState} from 'react'
+import React  from 'react'
 import Ticker from 'react-ticker'
 import ModalForm from './ModalForm'
 import Header from "./Header";
@@ -11,9 +11,10 @@ const ScrollScreen=({phrases, selectedPhrase, rotated, createPhrase, changeModal
 
   const phrase = phrases.map((item) => {
     return (
-      <div className="container">
+      <div key={item.id} className="container">
+      <input type="radio" value={item.id} name="displayPhrase"></input>
         <Ticker speed={item.speed}>
-          {({}) => (
+          {() => (
             <>
               <h1 className="ticker-text"> {item.text} </h1>
             </>
@@ -28,7 +29,9 @@ const ScrollScreen=({phrases, selectedPhrase, rotated, createPhrase, changeModal
   return (
     <div className="phrasesWrapper">
       <Header />
+      <form>
       {phrase}
+      </form>
       <div className="add-Btn-Container">
         <IoIosAddCircleOutline
           className="add-btn"
@@ -42,7 +45,7 @@ const ScrollScreen=({phrases, selectedPhrase, rotated, createPhrase, changeModal
     <div className="rotated-Div-Wrapper">
       <div className="rotated-Div">
         <Ticker className="full-Screen-Ticker" speed={selectedPhrase.speed *5}>
-          {({}) => (
+          {() => (
             <>
               <h1 className="rotated-H1">{selectedPhrase.text}</h1>
             </>

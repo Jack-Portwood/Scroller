@@ -1,6 +1,5 @@
-import React ,{useEffect,useState,Fragment} from 'react'
+import React ,{useState,Fragment} from 'react'
 import ScrollScreen from "./ScrollScreen"
-import Header from "./Header"
 import DeviceOrientation, {Orientation} from 'react-screen-orientation'
 
 //state to go here
@@ -37,6 +36,7 @@ const [phrases, setPhrases] = useState([
 ]);
 
 const [selectedPhrase, setSelectedPhrase] = useState(phrases[1]);
+
 
   return (
     <DeviceOrientation lockOrientation={"portrait"}>
