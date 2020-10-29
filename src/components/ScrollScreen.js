@@ -13,7 +13,7 @@ const ScrollScreen=({phrases, selectedPhrase, rotated, createPhrase, changeModal
     {console.log(item)}
     return (
       <div key={item.id} className="container">
-      <input type="radio" value={item} name="displayPhrase"></input>
+      <input type="radio" value={item.id} name="displayPhrase" onChange={usePhrase}></input>
         <Ticker speed={item.speed}>
           {() => (
             <>
@@ -30,9 +30,7 @@ const ScrollScreen=({phrases, selectedPhrase, rotated, createPhrase, changeModal
   return (
     <div className="phrasesWrapper">
       <Header />
-      <form onChange={usePhrase}>
       {phrase}
-      </form>
       <div className="add-Btn-Container">
         <IoIosAddCircleOutline
           className="add-btn"

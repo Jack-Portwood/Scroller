@@ -39,9 +39,11 @@ let [selectedPhrase, setSelectedPhrase] = useState(phrases[1]);
 
  function usePhrase(event){
    event.preventDefault();
-   console.log(event)
-   setSelectedPhrase = event.value
-
+   console.log(event.target.value + " This is the registered value passed in")
+   for (let phrase in phrases ){
+     console.log(phrase + " is the phrase")
+    console.log(phrase.id + " this is the phrase ID")
+     }
  }
 
 
