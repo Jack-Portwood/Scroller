@@ -37,13 +37,14 @@ const [phrases, setPhrases] = useState([
 
 let [selectedPhrase, setSelectedPhrase] = useState(phrases[1]);
 
- function usePhrase(event){
-   event.preventDefault();
-   console.log(event.target.value + " This is the registered value passed in")
-   for (let phrase in phrases ){
-     console.log(phrase + " is the phrase")
-    console.log(phrase.id + " this is the phrase ID")
-     }
+function usePhrase(event){
+  event.preventDefault();
+  console.log(phrases)
+  console.log(event.target.value + " This is the registered value passed in")
+  for (let hamster in phrases ){
+    console.log(hamster + " is the phrase")
+    console.log(hamster.id + " this is the phrase ID")
+  }
  }
 
 
