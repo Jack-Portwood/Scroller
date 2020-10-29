@@ -1,6 +1,7 @@
 import React ,{useState,Fragment} from 'react'
 import ScrollScreen from "./ScrollScreen"
 import DeviceOrientation, {Orientation} from 'react-screen-orientation'
+import { isCompositeComponent } from 'react-dom/test-utils';
 
 //state to go here
 //arrayOfPhrases objects
@@ -39,15 +40,23 @@ let [selectedPhrase, setSelectedPhrase] = useState(phrases[1]);
 
 function usePhrase(event) {
   event.preventDefault();
+  let newValue = parseInt(event.target.value)
   for (let i = 0; i < phrases.length; i++){
-    for (phrases[i].id){
-      if(phrases[i].id === event.values.id){
-        console.log(phrases[i])
+      if(phrases[i].id === newValue) {
+        setSelectedPhrase(phrases[i])
       }
     }
-  }
-  console.log(event.target.value[0]);
-  setSelectedPhrase(event.target.value);
+       
+    
+
+      
+      
+      
+    
+  
+  
+  // console.log(event.target.value[0]);
+  // setSelectedPhrase(event.target.value);
 }
 
 
