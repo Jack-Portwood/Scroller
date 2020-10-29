@@ -29,7 +29,7 @@ const ScrollScreen=({phrases, selectedPhrase, rotated, createPhrase, changeModal
   return (
     <div className="phrasesWrapper">
       <Header />
-      <form>
+      <form onClick={}>
       {phrase}
       </form>
       <div className="add-Btn-Container">
