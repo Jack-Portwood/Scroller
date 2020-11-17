@@ -46,17 +46,6 @@ function usePhrase(event) {
         setSelectedPhrase(phrases[i])
       }
     }
-       
-    
-
-      
-      
-      
-    
-  
-  
-  // console.log(event.target.value[0]);
-  // setSelectedPhrase(event.target.value);
 }
 
 

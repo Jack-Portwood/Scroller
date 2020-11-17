@@ -1,4 +1,4 @@
-import React  from 'react'
+import React, {useState}  from 'react'
 import Ticker from 'react-ticker'
 import ModalForm from './ModalForm'
 import Header from "./Header";
@@ -8,6 +8,12 @@ import { IoIosAddCircleOutline } from "react-icons/io";
 
 const ScrollScreen=({phrases, selectedPhrase, rotated, createPhrase, changeModal, usePhrase})=>{
 
+
+   const [modalIsOpen, setIsOpen] = useState(false);
+
+   function changeModal() {
+     setIsOpen(!modalIsOpen);
+   }
 
   const phrase = phrases.map((item) => {
     {console.log(item)}
@@ -21,7 +27,7 @@ const ScrollScreen=({phrases, selectedPhrase, rotated, createPhrase, changeModal
             </>
           )}
         </Ticker>
-        <ModalForm item={item} createPhrase={createPhrase} />
+        <ModalForm item={item} createPhrase={createPhrase} changeModal={changeModal} modalIsOpen={modalIsOpen} />
       </div>
     );
   });
@@ -35,6 +41,8 @@ const ScrollScreen=({phrases, selectedPhrase, rotated, createPhrase, changeModal
         <IoIosAddCircleOutline
           className="add-btn"
           onClick={changeModal}
+          modalIsOpen={modalIsOpen}
+          createPhrase={createPhrase}
         ></IoIosAddCircleOutline>
       </div>
     </div>

@@ -5,12 +5,8 @@ import { IoIosOptions} from "react-icons/io";
 // , IoIosAddCircleOutline may be used later
 
 
-const ModalForm=({item,createPhrase})=>{
-  const [modalIsOpen,setIsOpen] =useState(false);
-
-  function changeModal(){
-    setIsOpen(!modalIsOpen)
-  }
+const ModalForm=({item,createPhrase,modalIsOpen,changeModal})=>{
+ 
 
   Modal.setAppElement("body")
 
