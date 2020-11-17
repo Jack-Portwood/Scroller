@@ -8,6 +8,7 @@ const ModalForm=({item,createPhrase,modalIsOpen,changeModal})=>{
 // point of entery within html for Modal.
   Modal.setAppElement("body")
 
+
 // returns Modal containing form as well all options button.
   return (
     <div className="modelWrapper">
