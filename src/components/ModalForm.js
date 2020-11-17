@@ -6,6 +6,13 @@ import { IoIosOptions, IoIosAddCircleOutline } from "react-icons/io";
 
 
 const ModalForm=({item,createPhrase})=>{
+
+const optionBtn =  <IoIosOptions className="options-btn" onClick={changeModal}/>
+const addBtn = <IoIosAddCircleOutline className="options-btn" onClick={changeModal}/>
+
+
+
+
   const [modalIsOpen, setIsOpen] = useState(false);
 
   function changeModal() {
@@ -17,10 +24,8 @@ const ModalForm=({item,createPhrase})=>{
   // returns Modal containing form as well all options button.
   return (
     <div className="modelWrapper">
-      <IoIosOptions
-        className="options-btn"
-        onClick={changeModal}
-      ></IoIosOptions>
+      {item.css? optionBtn: addBtn }
+      
 
       <Modal className="myModal" isOpen={modalIsOpen}>
         <form onSubmit={createPhrase}>
