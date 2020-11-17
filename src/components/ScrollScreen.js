@@ -32,10 +32,10 @@ const ScrollScreen=({phrases, selectedPhrase, rotated, createPhrase, changeModal
       <Header />
       {phrase}
       <div className="add-Btn-Container">
-        <IoIosAddCircleOutline
+        <ModalForm
           className="add-btn"
           onClick={changeModal}
-        ></IoIosAddCircleOutline>
+          item={{text:"Please enter text"}}/>
       </div>
     </div>
   );
