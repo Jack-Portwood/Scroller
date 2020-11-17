@@ -3,9 +3,7 @@ import ScrollScreen from "./ScrollScreen"
 import DeviceOrientation, {Orientation} from 'react-screen-orientation'
 import { isCompositeComponent } from 'react-dom/test-utils';
 
-//state to go here
-//arrayOfPhrases objects
-//selectedPhrase
+
 
 //phraseObject{id:uuid,text:phrase,speed:number,css:css}
 
@@ -23,6 +21,12 @@ function updatePhrases(event) {
 function createPhrase(event) {
   event.preventDefault();
   console.log("Hello");
+}
+
+
+function deletePhrases(event) {
+  event.preventDefault();
+
 }
 
 //list of phrases objects. 
