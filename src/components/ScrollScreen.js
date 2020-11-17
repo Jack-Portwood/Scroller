@@ -8,13 +8,16 @@ import { IoIosAddCircleOutline } from "react-icons/io";
 
 const ScrollScreen=({phrases, selectedPhrase, rotated, createPhrase, changeModal, usePhrase})=>{
 
-
+  //state for modal display defualt set to false.
    const [modalIsOpen, setIsOpen] = useState(false);
 
+   //function to set modal using inverted state.
    function changeModal() {
      setIsOpen(!modalIsOpen);
    }
 
+// map function which returns ticker component which displays desired text.
+// also returns options button
   const phrase = phrases.map((item) => {
     {console.log(item)}
     return (
@@ -32,6 +35,8 @@ const ScrollScreen=({phrases, selectedPhrase, rotated, createPhrase, changeModal
     );
   });
 
+
+// returns either horizontal view or portraite view displaying relevent data. 
   if(!rotated){
   return (
     <div className="phrasesWrapper">

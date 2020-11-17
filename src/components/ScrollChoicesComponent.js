@@ -13,17 +13,19 @@ import { isCompositeComponent } from 'react-dom/test-utils';
 
 const ScrollChoicesComponent = () => {
 
+// passed to modal to update existing phrases state with amendments.  
 function updatePhrases(event) {
   event.preventDefault();
   console.log(phrases[0] + "hiya");
 }
 
+// passed to modal to create new phrases and to push into phrases state.
 function createPhrase(event) {
   event.preventDefault();
   console.log("Hello");
 }
 
-
+//list of phrases objects. 
 const [phrases, setPhrases] = useState([
   { id: 0, text: "this is the first item", speed: 2, css: "placeholder" },
   {
@@ -36,8 +38,11 @@ const [phrases, setPhrases] = useState([
   { id: 2, text: "this is the third item", speed: 15, css: "placeholder" },
 ]);
 
+// state for selected phrase to be passed into rotated component.
 let [selectedPhrase, setSelectedPhrase] = useState(phrases[1]);
 
+//function to iterate through phrases to return phrases with matching key and set
+//state of selected phrase
 function usePhrase(event) {
   event.preventDefault();
   let newValue = parseInt(event.target.value)
@@ -47,9 +52,8 @@ function usePhrase(event) {
       }
     }
 }
-
-
-
+//imported orientation component return view of horizontal screen
+//and view portrait screen.
   return (
     <DeviceOrientation lockOrientation={"portrait"}>
       <Orientation orientation="portrait" alwaysRender={false}>
@@ -76,10 +80,6 @@ function usePhrase(event) {
     </DeviceOrientation>
   );
 }
-
-
-
-
 
 
 export default ScrollChoicesComponent;
