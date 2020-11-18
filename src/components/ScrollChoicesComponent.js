@@ -11,10 +11,10 @@ import { isCompositeComponent } from 'react-dom/test-utils';
 
 const ScrollChoicesComponent = () => {
 
-// passed to modal to update existing phrases state with amendments.  
+// passed to modal to update existing phrases state with amendments.
 function updatePhrases(event) {
   event.preventDefault();
-  console.log(phrases[0] + "hiya");
+  console.log("hiya");
 }
 
 // passed to modal to create new phrases and to push into phrases state.
@@ -29,7 +29,7 @@ function deletePhrases(event) {
 
 }
 
-//list of phrases objects. 
+//list of phrases objects.
 const [phrases, setPhrases] = useState([
   { id: 0, text: "this is the first item", speed: 2, css: "placeholder" },
   {

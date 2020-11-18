@@ -7,67 +7,73 @@ import { IoIosOptions, IoIosAddCircleOutline } from "react-icons/io";
 
 const ModalForm=({item,createPhrase})=>{
 
-const optionBtn =  <IoIosOptions className="options-btn" onClick={changeModal}/>
-const addBtn = <IoIosAddCircleOutline className="options-btn" onClick={changeModal}/>
-
-
-
-
+  const [newText,setNewText]=useState(item.text)
   const [modalIsOpen, setIsOpen] = useState(false);
+
+  const optionBtn =  <IoIosOptions className="options-btn" onClick={changeModal}/>
+  const addBtn = <IoIosAddCircleOutline className="options-btn" onClick={changeModal}/>
+
+  function onChange(e){
+    let myText=e.target.value
+    setNewText(myText)
+    console.log (e.target.value + " is type of " + typeof(e.target.value))
+  }
+
 
   function changeModal() {
     setIsOpen(!modalIsOpen);
   }
   // point of entery within html for Modal.
   Modal.setAppElement("body");
-  
-  // returns Modal containing form as well all options button./ sexy terniry operator 
+
+  // returns Modal containing form as well all options button./ sexy terniry operator
   return (
     <div className="modelWrapper">
-      {item.css ? optionBtn : addBtn}
+    {item.css ? optionBtn : addBtn}
 
-      <Modal className="myModal" isOpen={modalIsOpen}>
-        <form onSubmit={createPhrase}>
-          <label>Input Phrase: </label>
-          <input
-            className="inputBox"
-            type="text"
-            name="phraseInput"
-            value={item.text}
-          ></input>
-          <label>
-            <p>Low Speed</p>
-          </label>
-          {item.speed ? (
-            <input type="radio" value={item.speed} name="updateSpeed"></input>
-          ) : (
-            <input type="radio" value={2} name="updateSpeed"></input>
-          )}
+    <Modal className="myModal" isOpen={modalIsOpen}>
+    <form onSubmit={createPhrase}>
+    <label>Input Phrase: </label>
+    <input
+    className="inputBox"
+    type="text"
+    name="phraseInput"
+    value={newText}
+    onChange={onChange}
+    ></input>
+    <label>
+    <p>Low Speed</p>
+    </label>
+    {item.speed ? (
+      <input type="radio" value={item.speed} name="updateSpeed"></input>
+    ) : (
+      <input type="radio" value={2} name="updateSpeed"></input>
+    )}
 
-          <label>
-            <p>Medium Speed</p>
-          </label>
-          {item.speed ? (
-            <input type="radio" value={item.speed} name="updateSpeed"></input>
-          ) : (
-            <input type="radio" value={5} name="updateSpeed"></input>
-          )}
+    <label>
+    <p>Medium Speed</p>
+    </label>
+    {item.speed ? (
+      <input type="radio" value={item.speed} name="updateSpeed"></input>
+    ) : (
+      <input type="radio" value={5} name="updateSpeed"></input>
+    )}
 
-          <label>
-            <p>High Speed</p>
-          </label>
-          {item.speed ? (
-            <input type="radio" value={item.speed} name="updateSpeed"></input>
-          ) : (
-            <input type="radio" value={15} name="updateSpeed"></input>
-          )}
+    <label>
+    <p>High Speed</p>
+    </label>
+    {item.speed ? (
+      <input type="radio" value={item.speed} name="updateSpeed"></input>
+    ) : (
+      <input type="radio" value={15} name="updateSpeed"></input>
+    )}
 
-          <button>Submit</button>
-        </form>
-        <button className="btn-updateModal" onClick={changeModal}>
-          Close
-        </button>
-      </Modal>
+    <button>Submit</button>
+    </form>
+    <button className="btn-updateModal" onClick={changeModal}>
+    Close
+    </button>
+    </Modal>
     </div>
   );
 }
