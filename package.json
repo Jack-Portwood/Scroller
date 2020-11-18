@@ -13,7 +13,8 @@
     "react-screen-orientation": "0.0.4",
     "react-scripts": "3.4.3",
     "react-scrolling-text": "^1.0.0",
-    "react-ticker": "^1.2.2"
+    "react-ticker": "^1.2.2",
+    "react-uuid": "^1.0.2"
   },
   "scripts": {
     "start": "react-scripts start",
