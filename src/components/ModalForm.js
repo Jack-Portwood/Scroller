@@ -8,6 +8,7 @@ import { IoIosOptions, IoIosAddCircleOutline } from "react-icons/io";
 const ModalForm=({item,createPhrase})=>{
 
   const [newText,setNewText]=useState(item.text)
+  const [newSpeed,setNewSpeed]=useState(item.speed)
   const [modalIsOpen, setIsOpen] = useState(false);
 
   const optionBtn =  <IoIosOptions className="options-btn" onClick={changeModal}/>
@@ -16,6 +17,11 @@ const ModalForm=({item,createPhrase})=>{
   function onChange(e){
     let myText=e.target.value
     setNewText(myText)
+  }
+
+  function updateSpeed(e){
+    let mySpeed=e.target.value
+    setNewSpeed(mySpeed)
     console.log (e.target.value + " is type of " + typeof(e.target.value))
   }
 
@@ -47,16 +53,16 @@ const ModalForm=({item,createPhrase})=>{
     {item.speed ? (
       <input type="radio" value={item.speed} name="updateSpeed"></input>
     ) : (
-      <input type="radio" value={2} name="updateSpeed"></input>
+      <input type="radio" value={2} name="updateSpeed" onChange={updateSpeed}></input>
     )}
 
     <label>
     <p>Medium Speed</p>
     </label>
     {item.speed ? (
-      <input type="radio" value={item.speed} name="updateSpeed"></input>
+      <input type="radio" value={item.speed} name="updateSpeed" onChange={updateSpeed}></input>
     ) : (
-      <input type="radio" value={5} name="updateSpeed"></input>
+      <input type="radio" value={5} name="updateSpeed" onChange={updateSpeed}></input>
     )}
 
     <label>
