@@ -38,8 +38,10 @@ const ModalForm=({item,createPhrase})=>{
     {item.css ? optionBtn : addBtn}
 
     <Modal className="myModal" isOpen={modalIsOpen}>
+    <h2 className="customHeader">Customize Your Message</h2>
+    <div className="formWrapper">
     <form onSubmit={createPhrase}>
-    <label>Input Phrase: </label>
+    <h4 className="inputHeader">Input text</h4>
     <input
     className="inputBox"
     type="text"
@@ -47,38 +49,43 @@ const ModalForm=({item,createPhrase})=>{
     value={newText}
     onChange={onChange}
     ></input>
-    <label>
-    <p>Low Speed</p>
+    <h4 className="speedHeader">Speed</h4>
+    <div className="speedDiv">
+    <label className="speedSelect">
+    <p>Low</p>
     </label>
     {item.speed ? (
-      <input type="radio" value={item.speed} name="updateSpeed"></input>
+      <input className="speedSelect" type="radio" value={item.speed} name="updateSpeed"></input>
     ) : (
-      <input type="radio" value={2} name="updateSpeed" onChange={updateSpeed}></input>
+      <input className="speedSelect" type="radio" value={2} name="updateSpeed" onChange={updateSpeed}></input>
     )}
 
-    <label>
-    <p>Medium Speed</p>
+    <label className="speedSelect">
+    <p>Med</p>
     </label>
     {item.speed ? (
-      <input type="radio" value={item.speed} name="updateSpeed" onChange={updateSpeed}></input>
+      <input className="speedSelect" type="radio" value={item.speed} name="updateSpeed" onChange={updateSpeed}></input>
     ) : (
-      <input type="radio" value={5} name="updateSpeed" onChange={updateSpeed}></input>
+      <input className="speedSelect" type="radio" value={5} name="updateSpeed" onChange={updateSpeed}></input>
     )}
 
-    <label>
-    <p>High Speed</p>
+    <label className="speedSelect">
+    <p>High</p>
     </label>
     {item.speed ? (
-      <input type="radio" value={item.speed} name="updateSpeed"></input>
+      <input className="speedSelect" type="radio" value={item.speed} name="updateSpeed"></input>
     ) : (
-      <input type="radio" value={15} name="updateSpeed"></input>
+      <input className="speedSelect" type="radio" value={15} name="updateSpeed"></input>
     )}
+    </div>
+    <br/>
 
-    <button>Submit</button>
+    <button className="submitBtn">Submit</button>
     </form>
     <button className="btn-updateModal" onClick={changeModal}>
     Close
     </button>
+    </div>
     </Modal>
     </div>
   );

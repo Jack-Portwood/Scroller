@@ -21,7 +21,8 @@ function updatePhrases(event) {
 // passed to modal to create new phrases and to push into phrases state.
 function createPhrase(event) {
   event.preventDefault();
-  const newPhrase={id:uuid(),text: event.target.phraseInput.value, speed:event.target.updateSpeed.value, css: "placeholder"}
+  const spacialString=" "+event.target.phraseInput.value
+  const newPhrase={id:uuid(),text:spacialString, speed:event.target.updateSpeed.value, css: "placeholder"}
   setPhrases([...phrases,newPhrase])
   console.log("Hello");
 }
@@ -30,6 +31,17 @@ function createPhrase(event) {
 function deletePhrases(event) {
   event.preventDefault();
 
+}
+
+//sets selected phrase to be displayed on rotation
+function usePhrase(event) {
+  event.preventDefault();
+  let newValue = (event.target.value)
+  for (let i = 0; i < phrases.length; i++){
+      if(phrases[i].id === newValue) {
+        setSelectedPhrase(phrases[i])
+      }
+    }
 }
 
 //list of phrases objects.
@@ -48,17 +60,7 @@ const [phrases, setPhrases] = useState([
 // state for selected phrase to be passed into rotated component.
 let [selectedPhrase, setSelectedPhrase] = useState(phrases[1]);
 
-//function to iterate through phrases to return phrases with matching key and set
-//state of selected phrase
-function usePhrase(event) {
-  event.preventDefault();
-  let newValue = (event.target.value)
-  for (let i = 0; i < phrases.length; i++){
-      if(phrases[i].id === newValue) {
-        setSelectedPhrase(phrases[i])
-      }
-    }
-}
+
 //imported orientation component return view of horizontal screen
 //and view portrait screen.
   return (
