@@ -6,7 +6,7 @@ import { IoIosAddCircleOutline } from "react-icons/io";
 
 
 
-const ScrollScreen=({phrases, selectedPhrase, rotated,usePhrase, createPhrase,updatePhrases})=>{
+const ScrollScreen=({phrases, selectedPhrase, rotated,usePhrase, createPhrase,updatePhrases,deletePhrase})=>{
 
 
   const phrase = phrases.map((item) => {
@@ -21,7 +21,7 @@ const ScrollScreen=({phrases, selectedPhrase, rotated,usePhrase, createPhrase,up
             </>
           )}
         </Ticker>
-        <ModalForm item={item} createPhrase={updatePhrases} />
+        <ModalForm item={item} createPhrase={updatePhrases} deletePhrase={deletePhrase} />
       </div>
     );
   });

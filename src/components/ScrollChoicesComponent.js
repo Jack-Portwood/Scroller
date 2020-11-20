@@ -28,11 +28,10 @@ function createPhrase(event) {
 }
 
 
-function deletePhrases(event) {
-  event.preventDefault();
-  let myNew=phrases.filter(event.target.id.value)
+function deletePhrase(id) {
+  let myNew=phrases.filter(phrases.id !== id)
   console.log(myNew)
-  
+
 
 }
 
@@ -73,6 +72,7 @@ let [selectedPhrase, setSelectedPhrase] = useState(phrases[1]);
           <ScrollScreen
             phrases={phrases}
             updatePhrases={updatePhrases}
+            deletePhrase={deletePhrase}
             rotated={false}
             createPhrase={createPhrase}
             usePhrase={usePhrase}

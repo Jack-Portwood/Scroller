@@ -5,7 +5,7 @@ import { IoIosOptions, IoIosAddCircleOutline } from "react-icons/io";
 // , IoIosAddCircleOutline may be used later
 
 
-const ModalForm=({item,createPhrase})=>{
+const ModalForm=({item,createPhrase,deletePhrase})=>{
 
   const [newText,setNewText]=useState(item.text)
   const [newSpeed,setNewSpeed]=useState(item.speed)
@@ -82,6 +82,8 @@ const ModalForm=({item,createPhrase})=>{
 
     <button className="submitBtn">Submit</button>
     </form>
+    <br/>
+    {item.css ? <button className="deletebtn" onClick={()=>deletePhrase(item.id)}>DELETE</button> : null}
     <button className="btn-updateModal" onClick={changeModal}>
     Close
     </button>
