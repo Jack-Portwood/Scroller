@@ -30,6 +30,9 @@ function createPhrase(event) {
 
 function deletePhrases(event) {
   event.preventDefault();
+  let myNew=phrases.filter(event.target.id.value)
+  console.log(myNew)
+  
 
 }
 
