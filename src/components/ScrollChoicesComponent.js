@@ -46,15 +46,9 @@ function usePhrase(event) {
 
 //list of phrases objects.
 const [phrases, setPhrases] = useState([
-  { id:uuid(), text: "this is the first item", speed: 2, css: "placeholder" },
-  {
-    id:uuid(),
-    text:
-      " Hello World, I am still in development view on your mobile device",
-    speed:5,
-    css: "placeholder",
-  },
-  { id:uuid(), text: "this is the third item", speed: 15, css: "placeholder" },
+{id:uuid(), text:" Hello World, I am still in development view on your mobile device",
+    speed:5,css: "placeholder"
+  }
 ]);
 
 // state for selected phrase to be passed into rotated component.
