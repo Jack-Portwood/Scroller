@@ -1,4 +1,4 @@
-import React ,{useState,Fragment} from 'react'
+import React ,{useState,Fragment,useEffect} from 'react'
 import ScrollScreen from "./ScrollScreen"
 import DeviceOrientation, {Orientation} from 'react-screen-orientation'
 import { isCompositeComponent } from 'react-dom/test-utils';
@@ -30,7 +30,7 @@ function createPhrase(event) {
 
 function deletePhrase(id) {
   setPhrases(phrases.filter((phrase)=>(phrase.id !== id)))
-  
+
 }
 
 //sets selected phrase to be displayed on rotation
@@ -51,8 +51,21 @@ const [phrases, setPhrases] = useState([
   }
 ]);
 
+const LOCAL_STORAGE_KEY="phrasesStore"
+
+useEffect(()=>{
+    const phrasesFetch=JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY));
+    if(phrasesFetch){
+      setPhrases(phrasesFetch);
+    }
+  },[]);
+
+useEffect(()=>{
+  localStorage.setItem(LOCAL_STORAGE_KEY,JSON.stringify(phrases))
+},[phrases])
+
 // state for selected phrase to be passed into rotated component.
-let [selectedPhrase, setSelectedPhrase] = useState(phrases[1]);
+let [selectedPhrase, setSelectedPhrase] = useState(phrases[0]);
 
 
 //imported orientation component return view of horizontal screen
