@@ -29,10 +29,8 @@ function createPhrase(event) {
 
 
 function deletePhrase(id) {
-  let myNew=phrases.filter(phrases.id !== id)
-  console.log(myNew)
-
-
+  setPhrases(phrases.filter((phrase)=>(phrase.id !== id)))
+  
 }
 
 //sets selected phrase to be displayed on rotation
