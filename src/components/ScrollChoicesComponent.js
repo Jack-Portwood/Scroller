@@ -20,10 +20,9 @@ function updatePhrases(id) {
 }
 
 // passed to modal to create new phrases and to push into phrases state.
-function createPhrase(event) {
-  event.preventDefault();
-  const spacialString=" "+event.target.phraseInput.value
-  const newPhrase={id:uuid(),text:spacialString, speed:event.target.updateSpeed.value, css: "placeholder"}
+function createPhrase(text,speed,css="css of sorts") {
+  const spacialString=" "+text
+  const newPhrase={id:uuid(),text:spacialString, speed:speed, css:css}
   setPhrases([...phrases,newPhrase])
   console.log("Hello");
 }
