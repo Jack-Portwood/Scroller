@@ -40,7 +40,7 @@ const ModalForm=({item,createPhrase,deletePhrase})=>{
     <Modal className="myModal" isOpen={modalIsOpen}>
     <h2 className="customHeader">Customize Your Message</h2>
     <div className="formWrapper">
-    <form onSubmit={createPhrase}>
+    <form onSubmit={()=>createPhrase(item.id)}>
     <h4 className="inputHeader">Input text</h4>
     <input
     className="inputBox"
@@ -55,27 +55,27 @@ const ModalForm=({item,createPhrase,deletePhrase})=>{
     <p>Low</p>
     </label>
     {item.speed ? (
-      <input className="speedSelect" type="radio" value={item.speed} name="updateSpeed"></input>
+      <input className="speedSelect" type="radio" value={item.speed} name="updateSpeed" required></input>
     ) : (
-      <input className="speedSelect" type="radio" value={2} name="updateSpeed" onChange={updateSpeed}></input>
+      <input className="speedSelect" type="radio" value={2} name="updateSpeed" onChange={updateSpeed} required></input>
     )}
 
     <label className="speedSelect">
     <p>Med</p>
     </label>
     {item.speed ? (
-      <input className="speedSelect" type="radio" value={item.speed} name="updateSpeed" onChange={updateSpeed}></input>
+      <input className="speedSelect" type="radio" value={item.speed} name="updateSpeed" onChange={updateSpeed} required></input>
     ) : (
-      <input className="speedSelect" type="radio" value={5} name="updateSpeed" onChange={updateSpeed}></input>
+      <input className="speedSelect" type="radio" value={5} name="updateSpeed" onChange={updateSpeed} required></input>
     )}
 
     <label className="speedSelect">
     <p>High</p>
     </label>
     {item.speed ? (
-      <input className="speedSelect" type="radio" value={item.speed} name="updateSpeed"></input>
+      <input className="speedSelect" type="radio" value={item.speed} name="updateSpeed" required></input>
     ) : (
-      <input className="speedSelect" type="radio" value={15} name="updateSpeed"></input>
+      <input className="speedSelect" type="radio" value={15} name="updateSpeed" required></input>
     )}
     </div>
     <br/>
@@ -94,3 +94,20 @@ const ModalForm=({item,createPhrase,deletePhrase})=>{
 }
 
 export default ModalForm;
+
+
+
+// update(uuid){
+//   allmystuuff=allthephrases //grab object of all phrases
+//   filterdphrase=allthephrases.filter(phrases.filter((phrase)=>(phrase.id == id)) //filter all phrases for one we wish to ammend
+//   filteredphrase.text=newText //alter content
+//   filterdphrase.speed=newSpeed //alter content
+//   filteredphrase.css=newCss //alter content
+//   for (phrase in allmystuff){ //apply new content to original content
+//     (if phrase.uuid=filteredphrase.uuid){
+//
+//     }
+//   }
+//   setPhrases(allmystuff) //set state
+//
+// }

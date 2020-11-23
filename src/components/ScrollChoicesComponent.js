@@ -13,9 +13,10 @@ import uuid from 'react-uuid'
 const ScrollChoicesComponent = () => {
 
 // passed to modal to update existing phrases state with amendments.
-function updatePhrases(event) {
-  event.preventDefault();
-  console.log("hiya");
+function updatePhrases(id) {
+  console.log(id)
+   console.log("This is the update phrases function")
+
 }
 
 // passed to modal to create new phrases and to push into phrases state.
