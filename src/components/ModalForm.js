@@ -27,6 +27,8 @@ const ModalForm=({item,createPhrase,deletePhrase})=>{
   }
 
 
+
+
   function changeModal() {
     setIsOpen(!modalIsOpen);
   }
@@ -59,8 +61,9 @@ const ModalForm=({item,createPhrase,deletePhrase})=>{
                 <input
                   className="speedSelect"
                   type="radio"
-                  value={item.speed}
+                  value={2}
                   name="updateSpeed"
+                  onChange={updateSpeed}
                   required
                 ></input>
               ) : (
@@ -81,7 +84,7 @@ const ModalForm=({item,createPhrase,deletePhrase})=>{
                 <input
                   className="speedSelect"
                   type="radio"
-                  value={item.speed}
+                  value={5}
                   name="updateSpeed"
                   onChange={updateSpeed}
                   required
@@ -104,8 +107,9 @@ const ModalForm=({item,createPhrase,deletePhrase})=>{
                 <input
                   className="speedSelect"
                   type="radio"
-                  value={item.speed}
+                  value={15}
                   name="updateSpeed"
+                  onChange={updateSpeed}
                   required
                 ></input>
               ) : (
@@ -121,12 +125,21 @@ const ModalForm=({item,createPhrase,deletePhrase})=>{
             </div>
             <br />
           </form>
+          {item.id ?<button
+            className="submitBtn"
+            onClick={() => createPhrase(item.id,newText, newSpeed, newCss)}
+          >
+            Update
+          </button>
+          :
           <button
             className="submitBtn"
             onClick={() => createPhrase(newText, newSpeed, newCss)}
           >
             Submit
           </button>
+          }
+      
 
           <br />
           {item.css ? (
