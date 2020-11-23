@@ -44,6 +44,25 @@ function usePhrase(event) {
     }
 }
 
+async function myAsyncFunc() {
+  
+  setTimeout(()=>{const asyncupdatePhrase = phrases
+  let messedUpPhrases = phrases[0].speed=99
+    console.log(messedUpPhrases);
+
+
+},3000)
+  
+  console.log(phrases[0].speed)
+}
+
+function functionToCallAsync(){
+  myAsyncFunc().then(console.log("Async that ran")); 
+}
+
+
+
+
 //list of phrases objects.
 const [phrases, setPhrases] = useState([
 {id:uuid(), text:" Hello World, I am still in development view on your mobile device",
@@ -74,6 +93,7 @@ let [selectedPhrase, setSelectedPhrase] = useState(phrases[0]);
     <DeviceOrientation lockOrientation={"portrait"}>
       <Orientation orientation="portrait" alwaysRender={false}>
         <Fragment>
+          <button onClick={functionToCallAsync}/>
           <ScrollScreen
             phrases={phrases}
             updatePhrases={updatePhrases}
