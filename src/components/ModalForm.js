@@ -1,8 +1,6 @@
 import React, { useState } from "react";
-// import Ticker from 'react-ticker'
 import Modal from "react-modal";
 import { IoIosOptions, IoIosAddCircleOutline } from "react-icons/io";
-// , IoIosAddCircleOutline may be used later
 
 const ModalForm = ({ item, createPhrase, deletePhrase }) => {
   const [newText, setNewText] = useState(item.text);
@@ -23,9 +21,8 @@ const ModalForm = ({ item, createPhrase, deletePhrase }) => {
   }
 
   function updateSpeed(e) {
-    let mySpeed = e.target.value;
+    let mySpeed = parseInt(e.target.value);
     setNewSpeed(mySpeed);
-    console.log(e.target.value + " is type of " + typeof e.target.value);
   }
 
   function changeModal() {
@@ -170,18 +167,3 @@ const ModalForm = ({ item, createPhrase, deletePhrase }) => {
 };
 
 export default ModalForm;
-
-// update(uuid){
-//   allmystuuff=allthephrases //grab object of all phrases
-//   filterdphrase=allthephrases.filter(phrases.filter((phrase)=>(phrase.id == id)) //filter all phrases for one we wish to ammend
-//   filteredphrase.text=newText //alter content
-//   filterdphrase.speed=newSpeed //alter content
-//   filteredphrase.css=newCss //alter content
-//   for (phrase in allmystuff){ //apply new content to original content
-//     (if phrase.uuid=filteredphrase.uuid){
-//
-//     }
-//   }
-//   setPhrases(allmystuff) //set state
-//
-// }

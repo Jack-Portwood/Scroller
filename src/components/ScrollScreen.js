@@ -2,7 +2,6 @@ import React from "react";
 import Ticker from "react-ticker";
 import ModalForm from "./ModalForm";
 import Header from "./Header";
-import { IoIosAddCircleOutline } from "react-icons/io";
 
 const ScrollScreen = ({
   phrases,
@@ -14,9 +13,7 @@ const ScrollScreen = ({
   deletePhrase,
 }) => {
   const phrase = phrases.map((item) => {
-    {
-      console.log(item);
-    }
+
     return (
       <div key={item.id} className="container">
         <input

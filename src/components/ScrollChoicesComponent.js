@@ -1,10 +1,7 @@
 import React, { useState, Fragment, useEffect } from "react";
 import ScrollScreen from "./ScrollScreen";
 import DeviceOrientation, { Orientation } from "react-screen-orientation";
-import { isCompositeComponent } from "react-dom/test-utils";
 import uuid from "react-uuid";
-
-//phraseObject{id:uuid,text:phrase,speed:number,css:css}
 
 const ScrollChoicesComponent = () => {
   // passed to modal to update existing phrases state with amendments.
@@ -31,7 +28,6 @@ const ScrollChoicesComponent = () => {
       css: css,
     };
     setPhrases([...phrases, newPhrase]);
-    console.log("Hello");
   }
 
   function deletePhrase(id) {
@@ -49,7 +45,7 @@ const ScrollChoicesComponent = () => {
     }
   }
 
-  //list of phrases objects.
+  //list of phrases objects. phraseObject{id:uuid,text:phrase,speed:number,css:css}
   const [phrases, setPhrases] = useState([
     {
       id: uuid(),
@@ -74,7 +70,13 @@ const ScrollChoicesComponent = () => {
   }, [phrases]);
 
   // state for selected phrase to be passed into rotated component.
-  let [selectedPhrase, setSelectedPhrase] = useState(phrases[0]);
+  let [selectedPhrase, setSelectedPhrase] = useState({
+    id: uuid(),
+    text:
+      " Welcome to Scroller ",
+    speed: 5,
+    css: "placeholder",
+  },);
 
   //imported orientation component return view of horizontal screen
   //and view portrait screen.
