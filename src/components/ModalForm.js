@@ -15,7 +15,7 @@ const ModalForm = ({ item, createPhrase, deletePhrase }) => {
     <IoIosAddCircleOutline className="options-btn" onClick={changeModal} />
   );
 
-  function onChange(e) {
+  function updateText(e) {
     let myText = e.target.value;
     setNewText(myText);
   }
@@ -23,6 +23,12 @@ const ModalForm = ({ item, createPhrase, deletePhrase }) => {
   function updateSpeed(e) {
     let mySpeed = parseInt(e.target.value);
     setNewSpeed(mySpeed);
+  }
+
+  function updateStyle(e){
+    let myStyle=e.target.value
+    setNewCss(myStyle)
+
   }
 
   function changeModal() {
@@ -60,14 +66,13 @@ const ModalForm = ({ item, createPhrase, deletePhrase }) => {
               type="text"
               name="phraseInput"
               value={newText}
-              onChange={onChange}
+              onChange={updateText}
             ></input>
             <h4 className="speedHeader">Speed</h4>
             <div className="speedDiv">
               <label className="speedSelect">
                 <p>Low</p>
               </label>
-              {item.speed ? (
                 <input
                   className="speedSelect"
                   type="radio"
@@ -76,21 +81,9 @@ const ModalForm = ({ item, createPhrase, deletePhrase }) => {
                   onChange={updateSpeed}
                   required
                 ></input>
-              ) : (
-                <input
-                  className="speedSelect"
-                  type="radio"
-                  value={2}
-                  name="updateSpeed"
-                  onChange={updateSpeed}
-                  required
-                ></input>
-              )}
-
               <label className="speedSelect">
                 <p>Med</p>
               </label>
-              {item.speed ? (
                 <input
                   className="speedSelect"
                   type="radio"
@@ -99,21 +92,10 @@ const ModalForm = ({ item, createPhrase, deletePhrase }) => {
                   onChange={updateSpeed}
                   required
                 ></input>
-              ) : (
-                <input
-                  className="speedSelect"
-                  type="radio"
-                  value={5}
-                  name="updateSpeed"
-                  onChange={updateSpeed}
-                  required
-                ></input>
-              )}
-
               <label className="speedSelect">
                 <p>High</p>
               </label>
-              {item.speed ? (
+
                 <input
                   className="speedSelect"
                   type="radio"
@@ -122,16 +104,45 @@ const ModalForm = ({ item, createPhrase, deletePhrase }) => {
                   onChange={updateSpeed}
                   required
                 ></input>
-              ) : (
+            </div>
+
+
+            <h4 className="styleHeader">Style</h4>
+            <div className="styleDiv">
+              <label className="styleSelect">
+                <p>Red</p>
+              </label>
                 <input
-                  className="speedSelect"
+                  className="styleSelect"
                   type="radio"
-                  value={15}
-                  name="updateSpeed"
-                  onChange={updateSpeed}
+                  value={"rotated-H1red"}
+                  name="updateStyle"
+                  onChange={updateStyle}
                   required
                 ></input>
-              )}
+              <label className="styleSelect">
+                <p>Green</p>
+              </label>
+                <input
+                  className="styleSelect"
+                  type="radio"
+                  value={"rotated-H1green"}
+                  name="updateStyle"
+                  onChange={updateStyle}
+                  required
+                ></input>
+              <label className="styleSelect">
+                <p>Blue</p>
+              </label>
+
+                <input
+                  className="styleSelect"
+                  type="radio"
+                  value={"rotated-H1blue"}
+                  name="updateStyle"
+                  onChange={updateStyle}
+                  required
+                ></input>
             </div>
             <br />
           </form>

@@ -126,12 +126,26 @@ body{
   margin-bottom: 0;
 }
 
+.styleHeader{
+  text-align:center;
+  margin-bottom: 0;
+}
+
 .speedDiv{
   display: inline-block;
   margin-top: 0;
 }
 
+.styleDiv{
+  display: inline-block;
+  margin-top: 0;
+}
+
 .speedSelect{
+  display: inline-block;
+}
+
+.styleSelect{
   display: inline-block;
 }
 

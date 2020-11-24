@@ -59,7 +59,7 @@ const ScrollScreen = ({
         <Ticker className="full-Screen-Ticker" speed={selectedPhrase.speed * 5}>
           {() => (
             <>
-              <h1 className="rotated-H1green">{selectedPhrase.text}</h1>
+              <h1 className={selectedPhrase.css}>{selectedPhrase.text}</h1>
             </>
           )}
         </Ticker>
