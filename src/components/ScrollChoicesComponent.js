@@ -49,8 +49,7 @@ const ScrollChoicesComponent = () => {
   const [phrases, setPhrases] = useState([
     {
       id: uuid(),
-      text:
-        " Hello World, I am still in development view on your mobile device",
+      text: " Welcome to Scroller",
       speed: 5,
       css: "red",
     },
@@ -75,7 +74,7 @@ const ScrollChoicesComponent = () => {
     text:
       " Welcome to Scroller ",
     speed: 5,
-    css: "rotated-H1red",
+    css: "red",
   },);
 
   //imported orientation component return view of horizontal screen
