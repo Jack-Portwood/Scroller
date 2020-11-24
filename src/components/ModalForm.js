@@ -5,7 +5,7 @@ import { IoIosOptions, IoIosAddCircleOutline } from "react-icons/io";
 const ModalForm = ({ item, createPhrase, deletePhrase }) => {
   const [newText, setNewText] = useState(item.text);
   const [newSpeed, setNewSpeed] = useState(item.speed);
-  const [newCss, setNewCss] = useState("This is new");
+  const [newCss, setNewCss] = useState(item.css);
   const [modalIsOpen, setIsOpen] = useState(false);
 
   const optionBtn = (

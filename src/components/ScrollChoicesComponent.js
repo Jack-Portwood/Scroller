@@ -19,7 +19,7 @@ const ScrollChoicesComponent = () => {
   }
 
   // passed to modal to create new phrases and to push into phrases state.
-  function createPhrase(text, speed, css = "css of sorts") {
+  function createPhrase(text="Please add text..", speed=2, css="red") {
     const spacialString = " " + text;
     const newPhrase = {
       id: uuid(),
