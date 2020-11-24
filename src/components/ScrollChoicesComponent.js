@@ -52,7 +52,7 @@ const ScrollChoicesComponent = () => {
       text:
         " Hello World, I am still in development view on your mobile device",
       speed: 5,
-      css: "rotated-H1red",
+      css: "red",
     },
   ]);
 
