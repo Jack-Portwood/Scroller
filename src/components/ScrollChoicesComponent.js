@@ -75,7 +75,7 @@ const ScrollChoicesComponent = () => {
     text:
       " Welcome to Scroller ",
     speed: 5,
-    css: "placeholder",
+    css: "rotated-H1red",
   },);
 
   //imported orientation component return view of horizontal screen

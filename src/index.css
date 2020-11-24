@@ -70,6 +70,24 @@ body{
   white-space: pre;
 }
 
+.ticker-textgreen{
+  font-size: 2vh;
+  color: green;
+  white-space: pre;
+}
+
+.ticker-textred{
+  font-size: 2vh;
+  color: red;
+  white-space: pre;
+}
+
+.ticker-textblue{
+  font-size: 2vh;
+  color: blue;
+  white-space: pre;
+}
+
 .rotated-Div-Wrapper{
   background-color: black;
   width:100vw;
@@ -86,6 +104,10 @@ body{
   width:100vw;
   white-space: pre;
   background-color: black;
+
+}
+
+.horiz-H1red{
 
 }
 

@@ -115,7 +115,7 @@ const ModalForm = ({ item, createPhrase, deletePhrase }) => {
                 <input
                   className="styleSelect"
                   type="radio"
-                  value={"rotated-H1red"}
+                  value={"red"}
                   name="updateStyle"
                   onChange={updateStyle}
                   required
@@ -126,7 +126,7 @@ const ModalForm = ({ item, createPhrase, deletePhrase }) => {
                 <input
                   className="styleSelect"
                   type="radio"
-                  value={"rotated-H1green"}
+                  value={"green"}
                   name="updateStyle"
                   onChange={updateStyle}
                   required
@@ -138,7 +138,7 @@ const ModalForm = ({ item, createPhrase, deletePhrase }) => {
                 <input
                   className="styleSelect"
                   type="radio"
-                  value={"rotated-H1blue"}
+                  value={"blue"}
                   name="updateStyle"
                   onChange={updateStyle}
                   required
