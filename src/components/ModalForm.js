@@ -37,30 +37,17 @@ const ModalForm = ({ item, createPhrase, deletePhrase }) => {
   }
 
   function updateAndClose(id, text, speed ,css){
-    valueCheck(text, speed, css)
     createPhrase(id, text, speed ,css)
     .then(changeModal())
   }
 
   function createAndClose(text, speed, css){
-    valueCheck(text, speed, css)? createPhrase(text, speed, css) && changeModal() : console.log(null+"Im doing nothing")
-    
+    createPhrase(text, speed, css)
+    changeModal()
   }
 
-  function valueCheck(text,speed,css){
-    if(text && speed && css ){
-      return true 
-    }else{
-      return false
-    }
- 
- 
-
-
-  }
+  
   // point of entry within html for Modal.
-
-
 
   Modal.setAppElement("body");
 
