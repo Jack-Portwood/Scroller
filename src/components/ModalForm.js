@@ -29,9 +29,23 @@ const ModalForm = ({ item, createPhrase, deletePhrase }) => {
   }
 
   function changeModal() {
+    item.id?setNewText(item.text):setNewText("")
     setIsOpen(!modalIsOpen);
   }
-  // point of entery within html for Modal.
+
+  function updateAndClose(id, text, speed ,css){
+    createPhrase(id, text, speed ,css)
+    .then(changeModal())
+  }
+
+  function createAndClose(text, speed, css){
+    createPhrase(text, speed, css)
+    changeModal()
+  }
+  // point of entry within html for Modal.
+
+
+
   Modal.setAppElement("body");
 
   // returns Modal containing form as well all options button./ sexy terniry operator
@@ -127,14 +141,14 @@ const ModalForm = ({ item, createPhrase, deletePhrase }) => {
           {item.id ? (
             <button
               className="submitBtn"
-              onClick={() => createPhrase(item.id, newText, newSpeed, newCss)}
+              onClick={() => updateAndClose(item.id, newText, newSpeed, newCss)}
             >
               Update
             </button>
           ) : (
             <button
               className="submitBtn"
-              onClick={() => createPhrase(newText, newSpeed, newCss)}
+              onClick={() => createAndClose(newText, newSpeed, newCss)}
             >
               Submit
             </button>
