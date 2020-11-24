@@ -90,8 +90,18 @@ body{
 }
 
 
-.rotated-H1{
+.rotated-H1red{
   color: red;
+  font-size: 45vh;
+}
+
+.rotated-H1blue{
+  color: blue;
+  font-size: 45vh;
+}
+
+.rotated-H1green{
+  color: green;
   font-size: 45vh;
 }
 
