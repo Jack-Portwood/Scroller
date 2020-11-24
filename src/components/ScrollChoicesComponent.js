@@ -10,19 +10,16 @@ const ScrollChoicesComponent = () => {
   // passed to modal to update existing phrases state with amendments.
   async function updatePhrases(id, newText, newSpeed, newCss) {
     const startingPhrases = phrases;
-    
+
     for (let i = 0; i < startingPhrases.length; i++) {
       if (startingPhrases[i].id === id) {
         startingPhrases[i].text = newText;
-        console.log(startingPhrases[i].speed)
         startingPhrases[i].speed = newSpeed;
         startingPhrases[i].css = newCss;
       }
     }
-    console.log(startingPhrases[1].speed)
-    setPhrases(startingPhrases);
+    setPhrases([...startingPhrases]);
   }
-
 
   // passed to modal to create new phrases and to push into phrases state.
   function createPhrase(text, speed, css = "css of sorts") {
@@ -51,21 +48,6 @@ const ScrollChoicesComponent = () => {
       }
     }
   }
-
-  // async function myAsyncFunc() {
-
-  //   setTimeout(()=>{const asyncupdatePhrase = phrases
-  //   let messedUpPhrases = phrases[0].speed=99
-  //     console.log(messedUpPhrases);
-
-  // },3000)
-
-  //   console.log(phrases[0].speed)
-  // }
-
-  // function functionToCallAsync(){
-  //   myAsyncFunc().then(console.log("Async that ran"));
-  // }
 
   //list of phrases objects.
   const [phrases, setPhrases] = useState([

@@ -1,33 +1,32 @@
-import React ,{useState} from 'react'
+import React, { useState } from "react";
 // import Ticker from 'react-ticker'
-import Modal from 'react-modal';
+import Modal from "react-modal";
 import { IoIosOptions, IoIosAddCircleOutline } from "react-icons/io";
 // , IoIosAddCircleOutline may be used later
 
-
-const ModalForm=({item,createPhrase,deletePhrase})=>{
-
-  const [newText,setNewText]=useState(item.text)
-  const [newSpeed,setNewSpeed]=useState(item.speed)
-  const [newCss, setNewCss]=useState("This is new")
+const ModalForm = ({ item, createPhrase, deletePhrase }) => {
+  const [newText, setNewText] = useState(item.text);
+  const [newSpeed, setNewSpeed] = useState(item.speed);
+  const [newCss, setNewCss] = useState("This is new");
   const [modalIsOpen, setIsOpen] = useState(false);
 
-  const optionBtn =  <IoIosOptions className="options-btn" onClick={changeModal}/>
-  const addBtn = <IoIosAddCircleOutline className="options-btn" onClick={changeModal}/>
+  const optionBtn = (
+    <IoIosOptions className="options-btn" onClick={changeModal} />
+  );
+  const addBtn = (
+    <IoIosAddCircleOutline className="options-btn" onClick={changeModal} />
+  );
 
-  function onChange(e){
-    let myText=e.target.value
-    setNewText(myText)
+  function onChange(e) {
+    let myText = e.target.value;
+    setNewText(myText);
   }
 
-  function updateSpeed(e){
-    let mySpeed=e.target.value
-    setNewSpeed(mySpeed)
-    console.log (e.target.value + " is type of " + typeof(e.target.value))
+  function updateSpeed(e) {
+    let mySpeed = e.target.value;
+    setNewSpeed(mySpeed);
+    console.log(e.target.value + " is type of " + typeof e.target.value);
   }
-
-
-
 
   function changeModal() {
     setIsOpen(!modalIsOpen);
@@ -125,21 +124,21 @@ const ModalForm=({item,createPhrase,deletePhrase})=>{
             </div>
             <br />
           </form>
-          {item.id ?<button
-            className="submitBtn"
-            onClick={() => createPhrase(item.id,newText, newSpeed, newCss)}
-          >
-            Update
-          </button>
-          :
-          <button
-            className="submitBtn"
-            onClick={() => createPhrase(newText, newSpeed, newCss)}
-          >
-            Submit
-          </button>
-          }
-      
+          {item.id ? (
+            <button
+              className="submitBtn"
+              onClick={() => createPhrase(item.id, newText, newSpeed, newCss)}
+            >
+              Update
+            </button>
+          ) : (
+            <button
+              className="submitBtn"
+              onClick={() => createPhrase(newText, newSpeed, newCss)}
+            >
+              Submit
+            </button>
+          )}
 
           <br />
           {item.css ? (
@@ -154,11 +153,9 @@ const ModalForm=({item,createPhrase,deletePhrase})=>{
       </Modal>
     </div>
   );
-}
+};
 
 export default ModalForm;
-
-
 
 // update(uuid){
 //   allmystuuff=allthephrases //grab object of all phrases
