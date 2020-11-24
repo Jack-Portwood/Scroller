@@ -88,6 +88,24 @@ body{
   white-space: pre;
 }
 
+.ticker-textpurple{
+  font-size: 2vh;
+  color: purple;
+  white-space: pre;
+}
+
+.ticker-textgold{
+  font-size: 2vh;
+  color: gold;
+  white-space: pre;
+}
+
+.ticker-textorange{
+  font-size: 2vh;
+  color: orange;
+  white-space: pre;
+}
+
 .rotated-Div-Wrapper{
   background-color: black;
   width:100vw;
@@ -124,6 +142,21 @@ body{
 
 .rotated-H1green{
   color: green;
+  font-size: 45vh;
+}
+
+.rotated-H1orange{
+  color: orange;
+  font-size: 45vh;
+}
+
+.rotated-H1purple{
+  color: purple;
+  font-size: 45vh;
+}
+
+.rotated-H1gold{
+  color: gold;
   font-size: 45vh;
 }
 

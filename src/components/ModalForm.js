@@ -143,6 +143,44 @@ const ModalForm = ({ item, createPhrase, deletePhrase }) => {
                   onChange={updateStyle}
                   required
                 ></input>
+
+            </div>
+            <div className="styleDiv">
+              <label className="styleSelect">
+                <p>Gold</p>
+              </label>
+                <input
+                  className="styleSelect"
+                  type="radio"
+                  value={"gold"}
+                  name="updateStyle"
+                  onChange={updateStyle}
+                  required
+                ></input>
+              <label className="styleSelect">
+                <p>Orange</p>
+              </label>
+                <input
+                  className="styleSelect"
+                  type="radio"
+                  value={"orange"}
+                  name="updateStyle"
+                  onChange={updateStyle}
+                  required
+                ></input>
+              <label className="styleSelect">
+                <p>Purple</p>
+              </label>
+
+                <input
+                  className="styleSelect"
+                  type="radio"
+                  value={"purple"}
+                  name="updateStyle"
+                  onChange={updateStyle}
+                  required
+                ></input>
+
             </div>
             <br />
           </form>
