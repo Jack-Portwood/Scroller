@@ -1,8 +1,11 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-![Imgur](https://i.imgur.com/KWd5TX9.jpg) # Wireframe
-![Imgur](https://i.imgur.com/EuMCqz9.jpg) # Vertical render
-![Imgur](https://i.imgur.com/7zIcfyr.jpg) #Horizontal render
+![Imgur](https://i.imgur.com/KWd5TX9.jpg) 
+# Wireframe
+![Imgur](https://i.imgur.com/EuMCqz9.jpg)
+ # Vertical render
+![Imgur](https://i.imgur.com/7zIcfyr.jpg)
+ # Horizontal render
 ## Available Scripts
 
 In the project directory, you can run:
