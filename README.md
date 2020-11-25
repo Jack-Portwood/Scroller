@@ -6,6 +6,13 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
  # Vertical render
 ![Imgur](https://i.imgur.com/7zIcfyr.jpg)
  # Horizontal render
+ 
+ ## Development background
+ *Scroller* was envisioned as a fun app to allow easy communication when speaking wasn't feasible. Use cases envisioned where 
+ at loud events such as nightclubs or concerts, moderate distances and situations where small text was not feasible, perhaps aiding the visually
+ impaired.
+ 
+ 
 ## Available Scripts
 
 In the project directory, you can run:
