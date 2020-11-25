@@ -11,7 +11,20 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
  *Scroller* was envisioned as a fun app to allow easy communication when speaking wasn't feasible. Use cases envisioned where 
  at loud events such as nightclubs or concerts, moderate distances and situations where small text was not feasible, perhaps aiding the visually
  impaired.
- 
+
+
+## Dependencies
+*Scroller* uses the following module imports:
+### react-screen-orientation
+    This offloads identification and effect of orientation of device
+### react-uuid
+    This generates unique indentification codes for components- used for generating unique keys.
+### react-ticker
+    This parses given html element into a component and scrolls it on display. 
+### react-modal
+    This offloads creation of modal component rather than code our own portal
+### react-icons/io
+    Source for all icons used in app
  
 ## Available Scripts
 
