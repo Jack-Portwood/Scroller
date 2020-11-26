@@ -3,7 +3,8 @@ import ScrollScreen from "./ScrollScreen";
 import DeviceOrientation, { Orientation } from "react-screen-orientation";
 import uuid from "react-uuid";
 const ScrollChoicesComponent = () => {
-  // passed to modal to update existing phrases state with amendments.
+
+  // passed to modal to update existing phrases state with ammendments.
   async function updatePhrases(id, newText, newSpeed, newCss) {
     const startingPhrases = phrases;
 
@@ -18,7 +19,9 @@ const ScrollChoicesComponent = () => {
   }
 
   // passed to modal to create new phrases and to push into phrases state.
-  function createPhrase(text = "Please add text..", speed = 2, css = "red") {
+  //default values added to avoid user input errors
+
+  function createPhrase(text = "", speed = 2, css = "red") {
     const spacialString = " " + text;
     const newPhrase = {
       id: uuid(),
@@ -29,11 +32,12 @@ const ScrollChoicesComponent = () => {
     setPhrases([...phrases, newPhrase]);
   }
 
+  //deletes given phrase from phrases array
   function deletePhrase(id) {
     setPhrases(phrases.filter((phrase) => phrase.id !== id));
   }
 
-  //sets selected phrase to be displayed on rotation
+  //sets selected phrase to be displayed upon rotation
   function usePhrase(event) {
     event.preventDefault();
     let newValue = event.target.value;
@@ -44,7 +48,7 @@ const ScrollChoicesComponent = () => {
     }
   }
 
-  //list of phrases objects. phraseObject{id:uuid,text:phrase,speed:number,css:css}
+  //list of phrases objects. phraseObject structure =>{id:uuid,text:phrase,speed:number,css:color}
   const [phrases, setPhrases] = useState([
     {
       id: uuid(),
@@ -62,6 +66,8 @@ const ScrollChoicesComponent = () => {
     css: "red",
   });
 
+
+  //local storage used to maintain state between user sessions. Stores list of phrases and selected phrase
   const LOCAL_STORAGE_KEY = "phrasesStore";
 
   useEffect(() => {

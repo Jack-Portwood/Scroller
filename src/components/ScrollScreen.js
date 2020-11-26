@@ -13,6 +13,8 @@ const ScrollScreen = ({
   updatePhrases,
   deletePhrase,
 }) => {
+
+  //map over all phrases and generaates a ticker div with scrolling text for each item
   const phrase = phrases.map((item) => {
 
     return (
@@ -58,12 +60,12 @@ const ScrollScreen = ({
     );
   }
   return (
-    <div className="rotated-Div-Wrapper">
-      <div className="rotated-Div">
+    <div className="horizonatal-Div-Wrapper">
+      <div className="horizontal-Div">
         <Ticker className="full-Screen-Ticker" speed={selectedPhrase.speed * 5}>
           {() => (
             <>
-              <h1 className={"rotated-H1"+selectedPhrase.css}>{selectedPhrase.text}</h1>
+              <h1 className={"horizontal-H1"+selectedPhrase.css}>{selectedPhrase.text}</h1>
             </>
           )}
         </Ticker>

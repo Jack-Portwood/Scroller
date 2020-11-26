@@ -8,6 +8,8 @@ const ModalForm = ({ item, createPhrase, deletePhrase }) => {
   const [newCss, setNewCss] = useState(item.css);
   const [modalIsOpen, setIsOpen] = useState(false);
 
+
+  //two options for modal image render
   const optionBtn = (
     <IoIosOptions className="options-btn" onClick={changeModal} />
   );
@@ -15,22 +17,28 @@ const ModalForm = ({ item, createPhrase, deletePhrase }) => {
     <IoIosAddCircleOutline className="options-btn" onClick={changeModal} />
   );
 
+
+  //function for form to update text on change
   function updateText(e) {
     let myText = e.target.value;
     setNewText(myText);
   }
 
+  //function for form to update speed on change
   function updateSpeed(e) {
     let mySpeed = parseInt(e.target.value);
     setNewSpeed(mySpeed);
   }
 
+  //function for form to update style/css on change
   function updateStyle(e){
     let myStyle=e.target.value
     setNewCss(myStyle)
 
   }
 
+  //open and close modal by inverting state
+  //if text exists it calls setNewtext() function
   function changeModal() {
     item.id?setNewText(item.text):setNewText("")
     setIsOpen(!modalIsOpen);
