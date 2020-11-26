@@ -19,7 +19,7 @@ const ScrollChoicesComponent = () => {
   }
 
   // passed to modal to create new phrases and to push into phrases state.
-  function createPhrase(text="Please add text..", speed=2, css="red") {
+  function createPhrase(text = "Please add text..", speed = 2, css = "red") {
     const spacialString = " " + text;
     const newPhrase = {
       id: uuid(),
@@ -55,27 +55,28 @@ const ScrollChoicesComponent = () => {
     },
   ]);
 
+  // state for selected phrase to be passed into rotated component.
+  let [selectedPhrase, setSelectedPhrase] = useState({
+    id: uuid(),
+    text: " Welcome to Scroller ",
+    speed: 5,
+    css: "red",
+  });
+
   const LOCAL_STORAGE_KEY = "phrasesStore";
 
   useEffect(() => {
     const phrasesFetch = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY));
     if (phrasesFetch) {
-      setPhrases(phrasesFetch);
+      setPhrases(phrasesFetch[0]);
+      setSelectedPhrase(phrasesFetch[1])
     }
   }, []);
 
   useEffect(() => {
-    localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(phrases));
-  }, [phrases]);
-
-  // state for selected phrase to be passed into rotated component.
-  let [selectedPhrase, setSelectedPhrase] = useState({
-    id: uuid(),
-    text:
-      " Welcome to Scroller ",
-    speed: 5,
-    css: "red",
-  },);
+    const allState = [phrases, selectedPhrase];
+    localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(allState));
+  }, [phrases, selectedPhrase]);
 
   //imported orientation component return view of horizontal screen
   //and view portrait screen.
