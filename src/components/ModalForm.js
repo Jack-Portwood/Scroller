@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Modal from "react-modal";
-import { IoIosOptions, IoIosAddCircleOutline,IoIosTrash,IoIosSave} from "react-icons/io";
+import { IoIosOptions, IoIosAddCircleOutline,IoIosTrash,IoIosSave, IoIosCloseCircleOutline} from "react-icons/io";
 
 const ModalForm = ({ item, createPhrase, deletePhrase }) => {
   const [newText, setNewText] = useState(item.text);
@@ -198,11 +198,8 @@ const ModalForm = ({ item, createPhrase, deletePhrase }) => {
           <br />
           {item.css ? (
             <IoIosTrash className="deletebtn" onClick={()=>deletePhrase(item.id)}/>
-
           ) : null}
-          <button className="btn-updateModal" onClick={changeModal}>
-            Close
-          </button>
+          <IoIosCloseCircleOutline className="closebtn" onClick={changeModal}/>
         </div>
       </Modal>
     </div>

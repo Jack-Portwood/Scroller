@@ -194,17 +194,17 @@ body{
   display: inline-block;
 }
 
-
-.submitBtn{
-  margin:2vh;
-}
-
 .deletebtn{
   height: 10vh;
   width: 10vw;
 }
 
 .savebtn{
+  height: 10vh;
+  width: 10vw;
+}
+
+.closebtn{
   height: 10vh;
   width: 10vw;
 }
