@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Modal from "react-modal";
-import { IoIosOptions, IoIosAddCircleOutline } from "react-icons/io";
+import { IoIosOptions, IoIosAddCircleOutline,IoIosTrash,IoIosSave} from "react-icons/io";
 
 const ModalForm = ({ item, createPhrase, deletePhrase }) => {
   const [newText, setNewText] = useState(item.text);
@@ -46,7 +46,7 @@ const ModalForm = ({ item, createPhrase, deletePhrase }) => {
     changeModal()
   }
 
-  
+
   // point of entry within html for Modal.
 
   Modal.setAppElement("body");
@@ -192,19 +192,13 @@ const ModalForm = ({ item, createPhrase, deletePhrase }) => {
               Update
             </button>
           ) : (
-            <button
-              className="submitBtn"
-              onClick={() => createAndClose(newText, newSpeed, newCss)}
-            >
-              Submit
-            </button>
+            <IoIosSave  className="savebtn" onClick={() => createAndClose(newText, newSpeed, newCss)}/>
           )}
 
           <br />
           {item.css ? (
-            <button className="deletebtn" onClick={() => deletePhrase(item.id)}>
-              DELETE
-            </button>
+            <IoIosTrash className="deletebtn" onClick={()=>deletePhrase(item.id)}/>
+
           ) : null}
           <button className="btn-updateModal" onClick={changeModal}>
             Close
