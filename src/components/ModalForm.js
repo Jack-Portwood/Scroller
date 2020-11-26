@@ -57,7 +57,7 @@ const ModalForm = ({ item, createPhrase, deletePhrase }) => {
       {item.css ? optionBtn : addBtn}
 
       <Modal className="myModal" isOpen={modalIsOpen}>
-        <h2 className="customHeader">Customize Your Message</h2>
+        <h1 className="logoFont">Customize Your Message</h1>
         <div className="formWrapper">
           <form onSubmit={() => createPhrase(item.id)}>
             <h4 className="inputHeader">Input text</h4>

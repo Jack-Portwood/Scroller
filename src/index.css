@@ -24,7 +24,7 @@ body{
 }
 
 
-.name{
+.logoFont{
   font-family:  'Faster One', sans-serif;
   padding-left: 2vw;
 }
@@ -39,7 +39,7 @@ body{
   border-left: solid 1px black;
   border-top: solid 1px black;
   overflow: scroll;
-  background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  background-image: linear-gradient(135deg, #fae0b3 0%, #f28729 100%);
   margin-left: 10vw;
   margin-top: 10vh;
 
