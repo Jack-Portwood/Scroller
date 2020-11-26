@@ -44,11 +44,15 @@ const ModalForm = ({ item, createPhrase, deletePhrase }) => {
     setIsOpen(!modalIsOpen);
   }
 
+  //takes existing state, updates elements requested to be updated, then passes
+  //new state to be set in ScrollChoicesComponent.
+  //Subsequently (async) closes modal
   function updateAndClose(id, text, speed ,css){
     createPhrase(id, text, speed ,css)
     .then(changeModal())
   }
 
+  //creates new phrase then closes modal
   function createAndClose(text, speed, css){
     createPhrase(text, speed, css)
     changeModal()
@@ -56,10 +60,9 @@ const ModalForm = ({ item, createPhrase, deletePhrase }) => {
 
 
   // point of entry within html for Modal.
-
   Modal.setAppElement("body");
 
-  // returns Modal containing form as well all options button./ sexy terniry operator
+  // returns Modal containing form as well all options button.
   return (
     <div className="modelWrapper">
       {item.css ? optionBtn : addBtn}
