@@ -197,14 +197,17 @@ body{
 .deletebtn{
   height: 10vh;
   width: 10vw;
+  margin: 1vw;
 }
 
 .savebtn{
   height: 10vh;
   width: 10vw;
+  margin: 1vw;
 }
 
 .closebtn{
   height: 10vh;
   width: 10vw;
+  margin: 1vw;
 }
