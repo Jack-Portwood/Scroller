@@ -190,7 +190,7 @@ const ModalForm = ({ item, createPhrase, deletePhrase }) => {
             <IoIosSave  className="savebtn" onClick={() => createAndClose(newText, newSpeed, newCss)}/>
           )}
 
-          
+
           {item.css ? (
             <IoIosTrash className="deletebtn" onClick={()=>deletePhrase(item.id)}/>
           ) : null}

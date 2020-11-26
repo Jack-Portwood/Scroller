@@ -211,3 +211,37 @@ body{
   width: 10vw;
   margin: 1vw;
 }
+
+
+.phoneIconContainer{
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  height:5vh;
+  max-height: 5vh;
+  margin: 1vh;
+}
+
+.phoneIcon{
+  position: relative;
+  top:2vh;
+  right:1vh;
+  height: 10vh;
+  width: 10vw;
+  margin: 1vw;
+  animation: spin 3s linear 1000;
+  padding:1vh;
+
+}
+
+@keyframes spin {
+  0% {
+    transform: rotateZ(0);
+  }
+  50% {
+    transform: rotateZ(90deg);
+  }
+  100{
+    transform: rotateZ(0deg)
+  }
+}

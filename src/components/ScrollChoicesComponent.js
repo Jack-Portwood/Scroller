@@ -2,7 +2,6 @@ import React, { useState, Fragment, useEffect } from "react";
 import ScrollScreen from "./ScrollScreen";
 import DeviceOrientation, { Orientation } from "react-screen-orientation";
 import uuid from "react-uuid";
-
 const ScrollChoicesComponent = () => {
   // passed to modal to update existing phrases state with amendments.
   async function updatePhrases(id, newText, newSpeed, newCss) {

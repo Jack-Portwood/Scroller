@@ -1,7 +1,8 @@
-import React from "react";
+import React ,{Fragment}from "react";
 import Ticker from "react-ticker";
 import ModalForm from "./ModalForm";
 import Header from "./Header";
+import { IoIosPhonePortrait} from "react-icons/io";
 
 const ScrollScreen = ({
   phrases,
@@ -42,6 +43,9 @@ const ScrollScreen = ({
     return (
       <div className="phrasesWrapper">
         <Header />
+        <div className="phoneIconContainer">
+        <p>Rotate to view</p><IoIosPhonePortrait className="phoneIcon"/>
+        </div>
         {phrase}
         <div className="add-Btn-Container">
           <ModalForm
