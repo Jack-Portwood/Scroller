@@ -58,7 +58,7 @@ const ScrollChoicesComponent = () => {
   // state for selected phrase to be passed into rotated component.
   let [selectedPhrase, setSelectedPhrase] = useState({
     id: uuid(),
-    text: " Welcome to Scroller ",
+    text: " Welcome to Scroller, please open on phone or dev-tools ",
     speed: 5,
     css: "red",
   });
