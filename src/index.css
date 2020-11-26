@@ -200,5 +200,11 @@ body{
 }
 
 .deletebtn{
-  background-color: red;
+  height: 10vh;
+  width: 10vw;
+}
+
+.savebtn{
+  height: 10vh;
+  width: 10vw;
 }
