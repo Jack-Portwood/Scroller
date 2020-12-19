@@ -1,4 +1,4 @@
-# [Scroller](https://jacksscrollingapp.netlify.app/)
+# [Scroller](https://scrollingapp.netlify.app/)
 
 ![Imgur](https://i.imgur.com/KWd5TX9.jpg) 
 # Wireframe
